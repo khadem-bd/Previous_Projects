@@ -1,0 +1,65 @@
+footer {
+    height: 291px;
+    background-image: url(../images/footer/footer-bg.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    .bordered-top {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 20px 0px;
+        p {
+            margin: 0px;
+            text-align: center;
+            color: $white;
+            font-size: 12px;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1600px) {
+    footer {
+        height: 218px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1300px) {
+    footer {
+        height: 182px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    footer {
+        .bordered-top {
+            padding: 10px 0px;
+            p {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    footer {
+        height: 87px;
+        .bordered-top {
+            padding: 10px 0px;
+            p {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+    footer {
+        height: 87px;
+        background-size: cover;
+        background-position: right center;
+    }
+}

@@ -1,0 +1,96 @@
+.tab {
+    .tab-header {
+        border-bottom: 1px solid #e5e5e5;
+        padding-left: 30px;
+        position: relative;
+        &:before {
+            @include psudo-common;
+            width: 6px;
+            height: 23px;
+            background-color: #878787;
+            border-radius: 0px 2px 2px 0px;
+            left: 0;
+            top: 14px;
+        }
+        li {
+            display: inline-block;
+            a {
+                display: inline-block;
+                padding: 15px 30px;
+                position: relative;
+                font-size: 12px;
+                font-weight: 400;
+                color: #565656;
+                cursor: pointer;
+                &.active {
+                    font-weight: 700;
+                    color: #39771d;
+                    &:before {
+                        @include psudo-common;
+                        width: 100%;
+                        height: 4px;
+                        background-color: #39771d;
+                        border-radius: 10px;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .tab-content {
+        li {
+            padding: 30px;
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .tab .tab-header li a {
+        padding: 15px 10px;
+    }
+}
+
+//NG tabs
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    border: none;
+}
+
+.nav-tabs {
+    border-bottom: none;
+    .nav-link {
+        color: #565656;
+        font-size: 12px;
+        transition: all 0.5s ease;
+        font-weight: 700;
+        border: none;
+        &.active {
+            position: relative;
+            &:after {
+                @include psudo-common;
+                height: 4px;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+                z-index: 100;
+            }
+        }
+    }
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    border: none;
+}
+
+.tab-content {
+    .active {
+        padding: 10px 0px;
+        color: #7C7C7C;
+    }
+}

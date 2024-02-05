@@ -1,0 +1,487 @@
+.banner {
+    
+    h4 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: #fff;
+        border-left: 2px solid $green;
+        padding-left: 15px;
+        text-transform: uppercase;
+        margin-left: 6px;
+        margin-bottom: 26px;
+
+        span {
+            @include inlineblock;
+            font-weight: 700;
+        }
+    }
+
+    ul {
+        li {
+            height: calc(100vh - 76px);
+            width: 100%;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+
+    .form-wrapper {
+        @include absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 200;
+
+        .booking-form {
+            margin-top: 76px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 450px;
+            z-index: 20;
+
+            .book-quote {
+                @include inlineblock;
+                background: #1C1C1C;
+                opacity: 0.8;
+                border-radius: 54px;
+                padding: 8px;
+
+                li {
+                    @include inlineblock;
+                    height: unset;
+                    width: unset;
+
+                    a {
+                        @include inlineblock;
+                        padding: 11px 0px;
+                        width: 118px;
+                        text-align: center;
+                        color: #606060;
+                        text-transform: uppercase;
+                        font-size: 13px;
+                        font-weight: 500;
+                        border-radius: 100px;
+                        border: 1px solid #0E101C;
+                        background-color: #0E101C;
+                        @include transition;
+
+                        &:hover {
+                            color: #fff;
+                        }
+
+                        &.active {
+                            color: #fff;
+                            border: 2px solid $green;
+                            font-weight: 700;
+                        }
+                    }
+
+                    &:last-child {
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            .vehicle-sneak-peak {
+                color: $white;
+                font-size: 20px;
+                @include inlineblock;
+                margin-left: 10px;
+                @include relative;
+
+                .popup-carinfo {
+                    @include absolute;
+                    width: 900px;
+                    top: 50px;
+                    right: 20px;
+                    padding: 4px;
+                    background-color: #fff;
+                    border-radius: 25px;
+                    transition: all 0.5s ease;
+                    z-index: 20;
+                    opacity: 0;
+                    visibility: hidden;
+                    .popup-content{
+                        padding: 20px 10px;
+                        h4 {
+                                padding-left: 0;
+                                margin-left: 0;
+                                margin-bottom: 8px;
+                                border-left: 0;
+                                color: #000;
+                                font-weight: 600;
+                                text-transform: capitalize;
+                            }
+                        
+                            p {
+                                &.popup-desc {
+                                    color: #000;
+                                    font-size: 14px !important;
+                                    line-height: 18px !important;
+                                }
+                            }
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                &:hover{
+                    .popup-carinfo{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+
+            .ride-type {
+                box-sizing: border-box;
+                font-size: 0;
+                margin-top: 20px;
+
+                li {
+                    @include inlineblock;
+                    height: unset;
+                    width: 50%;
+                    box-sizing: border-box;
+                    font-size: 0;
+
+                    a {
+                        display: block;
+                        padding: 10px 0px;
+                        text-align: center;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: rgba(255, 255, 255, 0.5);
+                        text-transform: uppercase;
+                        border-bottom: 1px solid #fff;
+
+                        &.active {
+                            color: $white;
+                            @include relative;
+                            border-bottom: 1px solid $green;
+
+                            &:after {
+                                @include psudoelem;
+                                width: 100%;
+                                height: 2px;
+                                bottom: 0px;
+                                transform: unset;
+                                left: 0;
+                                background-color: $green;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .form-group {
+                @include relative;
+                input::placeholder{
+                    font-size: 16px;
+                }
+                .icon {
+                    @include absolute;
+                    left: 0;
+                    color: $white;
+                    font-size: 16px;
+                    top: 10px;
+                }
+
+                .form-control {
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 0px;
+                    z-index: 20;
+                    border-bottom: 1px solid $white;
+                    padding-left: 25px;
+                    @include booking_form_input_text;
+
+                    &::-webkit-input-placeholder {
+                        @include booking_form_input_text;
+                        text-transform: capitalize;
+                    }
+
+                    &::-moz-placeholder {
+                        @include booking_form_input_text;
+                        text-transform: capitalize;
+                    }
+
+                    &:-ms-input-placeholder {
+                        @include booking_form_input_text;
+                        text-transform: capitalize;
+                    }
+
+                    &:-moz-placeholder {
+                        @include booking_form_input_text;
+                        text-transform: capitalize;
+                    }
+
+                    &:focus {
+                        box-shadow: unset;
+                    }
+                }
+            }
+
+            .btn {
+                padding: 13px 28px;
+                border-radius: 23px;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                text-transform: uppercase;
+                border: none;
+
+                &.btn-primary {
+                    background-color: #0FC500;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.innerpage-banner {
+    height: calc(100vh - 76px);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.exp-banner {
+        background-image: url(../images/experience/banner/banner.jpg);
+    }
+
+    &.tech-banner {
+        background-image: url(../images/tech/banner/banner-bg.jpg);
+
+    }
+
+    &.peace-of-mind-banner {
+        background-image: url(../images/peace-of-mind/banner/banner.jpg);
+    }
+
+    .content {
+        @include relative;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+
+        h2 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 65px;
+            line-height: 79px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            @include inlineblock;
+            text-align: left;
+
+            span {
+                @include block;
+                font-weight: 700;
+            }
+        }
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 1200px) {
+
+    .banner .form-wrapper .booking-form .vehicle-sneak-peak .popup-carinfo {
+        width: 700px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .banner {
+        margin-top: -4px;
+        h4{
+            font-size: 22px;
+            line-height: 22px;
+        }
+        .form-wrapper {
+            .booking-form {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .banner .form-wrapper .booking-form .vehicle-sneak-peak .popup-carinfo {
+        width: 500px;
+        right: -100px;
+        text-align: center;
+        .popup-content{
+            padding: 10px 0;
+           
+        }
+        img{
+            width: 90%;
+        }
+    }
+
+        .btn {
+            &.btn-primary {
+                background-color: #0FC500;
+                color: #fff;
+                padding: 8px 28px;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .banner {
+        margin-top: -4px;
+        h4{
+            font-size: 14px;
+            line-height: 14px;
+        }
+        .form-wrapper {
+            top: 55% !important;
+            .booking-form {
+                padding: 30px;
+                .btn {
+                        padding: 10px 25px;
+                        border-radius: 23px;
+                        font-weight: 700;
+                        font-size: 12px;
+                        line-height: 12px;
+                        text-transform: uppercase;
+                        border: none;
+                    }
+            }
+        }
+        ul {
+            li {
+                height: 500px;
+                width: 100%;
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+
+    .innerpage-banner{
+            &.exp-banner {
+                    background-image: url(../images/experience/banner/banner-mob.png);
+                }
+            
+                &.tech-banner {
+                    background-image: url(../images/tech/banner/banner-bg-mob.png);
+            
+                }
+            
+                &.peace-of-mind-banner {
+                    background-image: url(../images/peace-of-mind/banner/banner-mob.png);
+                }
+    }
+
+    .banner .form-wrapper .booking-form .vehicle-sneak-peak {
+        position: unset;
+        .popup-carinfo {
+                width: 100%;
+                margin-top: 13px;
+                left: 15px;
+                right: 0;
+                text-align: center;
+        
+                .popup-content {
+                    padding: 10px 0;
+        
+                }
+        
+                img {
+                    width: 100%;
+                }
+            }
+    }
+
+    .banner{
+        .form-wrapper {
+                top: 95%;
+            }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+        .banner {
+            margin-top: -4px;
+                h4 {
+                    font-size: 14px;
+                    line-height: 14px;
+                    margin-left: 6px;
+
+                }
+                .form-wrapper {
+                    top: 55% !important;
+                    .booking-form {
+                        padding: 25px;
+                        .form-group {
+                                input {
+                                    font-size: 10px;
+                        
+                                    &::placeholder {
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
+
+                        .btn-primary {
+                            padding: 14px 32px;
+                            margin-top: 10px;
+                            background-color: #0FC500 !important;
+                            font-size: 14px;
+                        }
+                    }
+                   
+                }
+                ul {
+                    li {
+                        height: 400px;
+                        width: 100%;
+                        background-position: top center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+        
+            }
+            .banner .form-wrapper .booking-form .vehicle-sneak-peak {
+                position:unset;
+                .popup-carinfo {
+                        width: 100%;
+                        margin-top: 13px;
+                        right: 0 !important;
+                        left: 15px !important;
+                        text-align: center;
+                
+                        .popup-content {
+                            padding: 10px 0;
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+            }
+
+            .banner .form-wrapper .booking-form .book-quote li a {
+                width: 80px;
+                font-size: 10px;
+                padding: 7px 0;
+            }
+
+         .innerpage-banner {
+            margin-top: -4px;
+         }
+
+
+}

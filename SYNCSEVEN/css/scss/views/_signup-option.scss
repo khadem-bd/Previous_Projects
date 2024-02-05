@@ -1,0 +1,84 @@
+.pl-close {
+    color: #BEBEBE;
+    font-size: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    z-index: 10;
+
+    &:hover {
+        color: #BEBEBE;
+        text-decoration: none;
+    }
+}
+
+.signup-options {
+    text-align: center;
+    padding-top: 219px;
+
+    a {
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: capitalize;
+        display: inline-block;
+        margin: 0px 95px;
+        padding-bottom: 30px;
+        position: relative;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 104px;
+            height: 7px;
+            background-color: $ss-blue;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.rc-graphics {
+    margin-top: 123px;
+    text-align: center;
+
+    .image-holder {
+        border-bottom: 2px solid $light-gray;
+        margin-bottom: 83px;
+
+        img {
+            margin-bottom: -2px;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .signup-options a {
+        margin: 0px 20px;
+    }
+    .rc-graphics .image-holder img{
+        width: 100%;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 604px) {
+    .signup-options a {
+        display: block;
+        width: 276px;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 400px) {
+    .signup-options a {
+        font-size: 16px;
+        padding-bottom: 20px;
+      }
+}

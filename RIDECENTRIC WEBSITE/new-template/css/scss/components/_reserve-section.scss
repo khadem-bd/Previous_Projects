@@ -1,0 +1,151 @@
+.reserve-section {
+    background-color: #E9E9E9;
+    padding: 40px 0px;
+    min-height: unset;
+    &.peace-reserve{
+        padding: 100px 0;
+    }
+
+    .exp-slogan {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 52px;
+        text-transform: uppercase;
+        color: #000000;
+        span {
+            font-weight: 700;
+            
+        }
+
+
+        .icon-long-arrow {
+            color: #0376F9;
+            display: inline-block;
+            margin-left: 30px;
+            vertical-align: middle;
+            font-size: 60px;
+            
+        }
+    }
+
+    .btn {
+        padding: 20px 70px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 50px;
+        border: unset;
+
+        &.btn-primary {
+            background-color: #0FC500;
+            color: #fff;
+        }
+    }
+
+    &.tech-slogan {
+        background-color: transparent;
+
+        .border-top {
+            border-top: 6px solid #D9D9D9 !important;
+            padding: 100px 0px;
+        }
+    }
+
+    &.pom {
+        padding: 150px 0;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 1280px) {
+    .reserve-section .exp-slogan .icon-long-arrow {
+        font-size: 40px;
+    }
+
+    .reserve-section .btn {
+        padding: 15px 50px;
+        font-size: 22px;
+    }
+
+    .reserve-section .exp-slogan {
+
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+        .reserve-section {
+                &.peace-reserve {
+                    padding: 100px 0;
+                }
+            }
+    .reserve-section p.exp-slogan {
+        font-size: 20px !important;
+    }
+    .reserve-section .btn {
+        padding: 15px 45px;
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+        .reserve-section {
+                &.peace-reserve {
+                    padding: 80px 0;
+                }
+            }
+    .reserve-section p.exp-slogan {
+        margin-bottom: 20px;
+        font-size: 18px !important;
+        line-height: 26px !important;
+    }
+
+    .reserve-section.pom {
+        padding: 80px 0;
+    }
+.reserve-section.tech-slogan .border-top {
+    padding: 50px 0px !important;
+}
+    .reserve-section .exp-slogan .icon-long-arrow {
+        margin-top: -2px;
+        font-size: 20px;
+        margin-left: 15px;
+    }
+    .reserve-section .btn {
+        padding: 14px 40px;
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+    .reserve-section {
+        &.peace-reserve {
+            padding: 80px 0;
+        }
+        &.tech-slogan {
+            background-color: transparent;
+
+            .border-top {
+                border-top: 2px solid #D9D9D9 !important;
+                padding: 100px 0px;
+            }
+        }
+    }
+    .reserve-section .btn.btn-primary.ml-5 {
+        margin-left: 0 !important;
+        margin-top: 15px;
+    }
+        .reserve-section .btn {
+        padding: 12px 24px;
+        font-size: 12px;
+        line-height: 12px;
+    }
+    .reserve-section p.exp-slogan {
+        margin-bottom: 20px;
+        font-size: 12px !important;
+        line-height: 18px !important;
+    }
+}

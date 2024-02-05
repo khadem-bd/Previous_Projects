@@ -1,0 +1,90 @@
+.mega-menu {
+    position: absolute;
+    background-color: $white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 500;
+    width: 100%;
+    left: 0;
+    top: 66px;
+    transition: all 0.5s ease;
+    opacity: 0;
+    visibility: hidden;
+    .gray-section {
+        background-color: #F6F6F6;
+        border-right: 1px solid #DDDEE4;
+        padding: 30px 15px 15px 15px;
+        ul {
+            &.categories {
+                li {
+                    text-align: right;
+                    margin-bottom: 10px;
+                    display: block;
+                    a {
+                        display: inline-block;
+                        padding: 0px;
+                        font-weight: 700;
+                        color: #3A494E;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        transition: all 0.5s ease;
+                        position: relative;
+                        &:after {
+                            @include psudo-common;
+                            background-color: #39771D;
+                            height: 3px;
+                            width: 0%;
+                            right: 0;
+                            bottom: -4px;
+                            border-radius: 4px;
+                            transition: all 0.5s ease;
+                        }
+                        &:hover {
+                            color: #39771D;
+                            text-decoration: none;
+                            &:after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .category-menu {
+        margin-bottom: 40px;
+        margin-top: 6px;
+        text-align: left;
+        h3 {
+            font-weight: 700;
+            color: #3A494E;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-top: 0px;
+            margin-bottom: 15px;
+        }
+        ul {
+            li {
+                margin-bottom: 10px;
+                display: block;
+                a {
+                    display: inline-block;
+                    color: #3A494E;
+                    font-size: 12px;
+                    font-weight: 400;
+                    padding: 0px;
+                    transition: all 0.5s ease;
+                    &:hover {
+                        color: #39771D;
+                        text-decoration: none;
+                        font-weight: 600;
+                    }
+                    &.active {
+                        color: #39771D;
+                        text-decoration: none;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}

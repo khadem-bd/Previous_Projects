@@ -1,0 +1,80 @@
+.eftp{
+    padding-top: 100px;
+    a{
+        display: $inlineblock;
+        padding-bottom: 100px;
+        &:after{
+            width:100%;
+            border-radius: $border-radius;
+            height: 5px;
+            position: absolute;
+            content:"";
+            left: 0;
+            bottom:0;
+            transition: all 0.5s ease;
+            opacity: 0;
+            visibility: hidden;
+            background-color: $blue;
+        }
+        .icon{
+            display: block;
+            font-size: 70px;
+            color:$green;
+            margin-bottom: 15px;
+            transition: all 0.5s ease;
+        }
+        p{
+            font-size: 30px;
+            font-weight: 400;
+            color:$dark
+        }
+        &:hover{
+            .icon{
+                color:$blue;
+            }
+            &:after{
+               opacity: 1;
+               visibility: visible; 
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .eftp{
+        padding-top: 50px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1250px) {
+    .eftp{
+        a{
+            .icon{
+                font-size: 40px;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .eftp{
+        a{
+            padding-bottom: 50px;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .eftp{
+        a{
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            &:after{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.reward-banner {
+    ul {
+        li {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.client-logo {
+    height: 159px;
+    text-align: center;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.reward-slider {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 20px 20px 20px 125px;
+    overflow: hidden;
+    position: relative;
+
+    .badge {
+        display: inline-block;
+        position: absolute;
+        left: 7px;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: 700;
+
+        .badge-name {
+            display: inline-block;
+            margin-top: 15px;
+
+            .icon {
+                display: inline-block;
+                font-size: 17px;
+            }
+        }
+
+        .value {
+            display: inline-block;
+            float: right;
+            text-align: right;
+
+            .label {
+                color: #A4AFB7;
+                font-weight: 400;
+                font-size: 12px;
+                display: block;
+            }
+
+            .number {
+                color: #3A494E;
+                font-size: 27px;
+            }
+        }
+    }
+
+    .progress-bar {
+        background: #E7E1E1;
+        border-radius: 40px;
+        height: 11px;
+        position: relative;
+        display: block;
+        overflow: unset;
+
+        .progress {
+            border-radius: 40px;
+            height: 11px;
+        }
+
+        .peak-point {
+            text-align: right;
+            position: absolute;
+            top: 12px;
+            right: -3px;
+
+            .icon {
+                color: #39771D;
+                font-size: 14px;
+            }
+
+            p {
+                font-weight: 700;
+                font-size: 12px;
+                color: #A4AFB7;
+                margin: 0;
+            }
+        }
+    }
+
+    p {
+        color: #A4AFB7;
+        font-weight: 700;
+        font-size: 18px;
+        margin: 18px 0 0 0;
+    }
+
+    &.gold {
+        h2 {
+            .badge-name {
+                color: #A97F41;
+            }
+        }
+
+        .progress-bar {
+            margin-top: 15px;
+
+            .progress {
+                background: linear-gradient(90deg, #3BA106 0%, #55D11D 100%);
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1360px) {
+    .reward-slider {
+        padding: 20px 20px 20px 80px;
+    }
+
+    .reward-slider .badge {
+        width: 60px;
+        top: 37px;
+    }
+
+    .reward-slider h2 {
+        font-size: 20px;
+    }
+
+    .reward-slider h2 .value .label {
+        font-size: 10px;
+    }
+
+    .reward-slider h2 .value .number {
+        font-size: 20px;
+    }
+
+    .reward-slider h2 .badge-name .icon {
+        font-size: 12px;
+    }
+
+    .client-logo {
+        height: 149px;
+        margin-top: 20px;
+    }
+
+    .reward-slider p {
+        font-size: 12px;
+        margin: 25px 0 0 0;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1100px) {
+    .booking-form.rewards .location-info h2 {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .booking-form.rewards {
+        margin-top: 20px;
+    }
+
+    .reward-slider {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .reward-slider h2 .value {
+        float: unset;
+        display: block;
+        text-align: left;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,21 @@
+.mission-vision {
+    h2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35px;
+        text-transform: capitalize;
+        color: $blue;
+        margin-bottom: 20px;
+    }
+
+    p {
+        color: $dark;
+        margin-bottom: 15px;
+        &.highlighted {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+
+        }
+    }
+}

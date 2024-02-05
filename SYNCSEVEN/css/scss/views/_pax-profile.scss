@@ -1,0 +1,79 @@
+.pax-profile-info {
+    padding: 20px;
+    .user-image {
+        margin-top: 30px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .edit-btn {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: #ededed;
+            top: 14px;
+            right: 0;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            color: $black;
+            font-size: 14px;
+            padding-top: 5px;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+        }
+        &:hover {
+            .edit-btn {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    h2 {
+        font-size: 23px;
+        font-weight: 700;
+        &.section-heading {
+            padding-left: 0;
+            margin-bottom: 20px;
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .profile-status {
+        font-weight: 500;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .edit {
+        color: #A6A6A6;
+    }
+    .pax-section {
+        padding-left: 80px;
+        position: relative;
+        .section-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #F4F5F9;
+            position: absolute;
+            top: 17px;
+            left: 20px;
+            text-align: center;
+            padding-top: 8px;
+            .icon {
+                display: inline-block;
+            }
+        }
+    }
+}

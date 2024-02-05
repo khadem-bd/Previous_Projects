@@ -1,0 +1,10 @@
+footer{
+    border-top:1px solid $footer-border;
+    background-color: $footer-bg;
+    padding:20px 0px;
+    p{
+        font-size: 14px;
+        font-weight: 400;
+        color: $white;
+    }
+}

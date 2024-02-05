@@ -1,0 +1,71 @@
+.ride-route {
+    position: relative;
+    &:before {
+        @include psudo-common;
+        width: 1px;
+        height: 100%;
+        top: 6px;
+        left: 5px;
+        background-color: #000;
+    }
+    li {
+        margin-bottom: 30px;
+        padding-left: 30px;
+        position: relative;
+        &:before {
+            @include psudo-common;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            border: 1px solid #FF9900;
+            top: 11px;
+            left: 0;
+            background-color: $white;
+            z-index: 10;
+        }
+        &:after {
+            @include psudo-common;
+            width: 20px;
+            height: 1px;
+            background-color: #FF9900;
+            top: 16px;
+            left: -4px;
+            z-index: 5;
+        }
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            margin-bottom: 2px;
+            font-size: 16px;
+        }
+        &:first-child {
+            &:before {
+                border: 1px solid #39771D;
+            }
+            &:after {
+                background-color: #39771D;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+            &:before {
+                border: 1px solid #FF0000;
+            }
+            &:after {
+                background-color: #FF0000;
+            }
+            h2 {
+                &:before {
+                    @include psudo-common;
+                    width: 2px;
+                    height: 100%;
+                    background-color: $white;
+                    left: 4px;
+                    top: 26px;
+                    z-index: 20;
+                }
+            }
+        }
+    }
+}

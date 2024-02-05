@@ -1,0 +1,176 @@
+.thumb-big {
+    max-width: 100%;
+    margin-bottom: 20px;
+    height: 292px;
+}
+
+.thumb-list {
+    li {
+        display: inline-block;
+        margin-right: 10px;
+        a {
+            display: inline-block;
+            border-radius: 3px;
+            height: 60px;
+            background-color: #f5f6fa;
+            text-align: center;
+            width: 100%;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.cash-value {
+    width: 76px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3A494E;
+    border: 2px solid #3A494E;
+    display: inline-block;
+    text-align: center;
+    margin-right: 10px;
+    transition: all 0.5s ease;
+    border-radius: 4px;
+    &:hover {
+        background-color: #3A494E;
+        color: $white;
+    }
+}
+
+.cash-input {
+    padding-left: 40px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+    vertical-align: top;
+    border-radius: 4px;
+    .icon {
+        display: inline-block;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        font-size: 25px;
+    }
+    input[type="text"] {
+        border: unset;
+        height: 41px;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+.delivery-address {
+    padding-right: 50px;
+    position: relative;
+    .icon {
+        display: inline-block;
+        position: absolute;
+        font-size: 37px;
+        top: 0;
+        right: 0;
+        line-height: 20px;
+        color: #979797;
+    }
+}
+
+.submit-text {
+    color: #979797;
+    font-size: 12px;
+    margin: 10px 0px 20px 0px;
+}
+
+.redeem-table {
+    tr {
+        th {
+            color: #3A494E;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        td {
+            padding: 5px 10px;
+            &.num-input {
+                .form-control {
+                    border: 2px solid #3A494E;
+                    height: 45px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    table {
+        &.redeem-table {
+            tr {
+                td {
+                    &.num-input {
+                        width: 80px;
+                    }
+                }
+                th {
+                    &.num-input {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    table {
+        &.redeem-table {
+            tr {
+                td {
+                    &.num-input {
+                        width: 80px;
+                    }
+                    .cash-input {
+                        padding-left: 25px;
+                        .icon {
+                            display: inline-block;
+                            position: absolute;
+                            top: 13px;
+                            left: 6px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                th {
+                    &.num-input {
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slick-arrow {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &.sl-prev {
+        left: -22px;
+    }
+    &.sl-next {
+        right: -22px;
+    }
+}
+
+.redeem-col-width {
+    width: 200px;
+}

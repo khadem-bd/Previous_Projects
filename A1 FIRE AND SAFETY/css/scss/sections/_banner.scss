@@ -1,0 +1,109 @@
+.banner {
+    height: 100vh;
+
+    .slick-initialized .slick-slide {
+        padding: 0;
+    }
+
+    ul {
+        li {
+            height: 100vh;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .v-align-center {
+                position: relative;
+                text-align: center;
+                top: 50%;
+                transform: translateY(-50%);
+
+                p {
+                    @include processText(false, 16px, 500, #fff, false, false, false, uppercase, false, false);
+                }
+
+                h2 {
+                    @include processText(false, 56px, 700, #fff, 0px 0px 50px 0px, false, false, false, false, false);
+
+                    span {
+                        @include processText(block, false, 300, false, false, false, false, false, false, false);
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        position: absolute;
+        z-index: 9999;
+        display: inline-block;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        li {
+            height: unset;
+            display: inline-block;
+            border: none;
+            text-indent: -9999px;
+            width: 16px;
+            height: 16px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            margin: 0px 5px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+
+            &.slick-active {
+                border-radius: 0px;
+                border: unset;
+                width: 16px;
+                height: 23px;
+                background-image: url(../images/banner-active-dot.svg);
+                background-position: top center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                top: -5px;
+                position: relative;
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .banner {
+        ul {
+            li {
+                .v-align-center {
+                    p {
+                        font-size: 14px;
+                    }
+
+                    h2 {
+                        font-size: 36px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .banner {
+        ul {
+            li {
+                .v-align-center {
+                    p {
+                        font-size: 12px;
+                    }
+
+                    h2 {
+                        font-size: 26px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

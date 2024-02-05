@@ -1,0 +1,59 @@
+.analytics {
+    background-image: url(../images/homepage/analytics/bg.webp);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .card {
+        height: 230px;
+        background-color: $red;
+        text-align: center;
+        padding-top: 38px;
+
+        .icon {
+            display: inline-block;
+            color: #fff;
+            font-size: 60px;
+            margin-bottom: 13px;
+        }
+
+        h3 {
+            @include processText(false, 40px, 700, #fff, 0px 0px 10px 0px, 0, center, false, relative, false);
+
+            sup {
+                @include processText(inline-block, 24px, 700, #fff, 0, 0, false, false, relative, false);
+                left: -6px;
+                top: -20px;
+            }
+        }
+
+        p {
+            @include processText(false, 16px, 400, #fff, 0, 0, center, capitalize, false, false);
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .analytics{
+        .card{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+    .analytics{
+        .card{
+            margin-bottom: 30px;
+            .icon{
+                font-size: 50px;
+            }
+            h3{
+                font-size: 30px;
+                sup{
+                    top: -13px;
+                }
+            }
+        }
+    }
+}

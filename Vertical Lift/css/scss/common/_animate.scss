@@ -1,0 +1,42 @@
+$pos: -50px;
+.vts_fadein{
+    transition: all 1s ease;
+    opacity: 0;
+    visibility: hidden;
+    position: relative;
+    &.vts_left{
+        margin-left: $pos;
+        &.animate{
+            margin-left: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &.vts_right{
+        margin-right: $pos;
+        &.animate{
+            margin-right: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &.vts_top{
+        top: $pos;
+        &.animate{
+            top: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &.vts_bottom{
+        bottom: $pos;
+        &.animate{
+            bottom: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

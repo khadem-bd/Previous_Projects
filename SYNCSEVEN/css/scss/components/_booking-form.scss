@@ -1,0 +1,755 @@
+.booking-form {
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+    z-index: 100;
+    .booking-btn {
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 800;
+        width: 70%;
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        border: none;
+        padding: 10px 0px;
+        margin-top: 31px;
+        &.btn-primary {
+            background-color: #0fc500 !important;
+            color: #fff;
+            &:hover {
+                background-color: #0fc500 !important;
+            }
+        }
+    }
+    .location-info {
+        padding: 30px;
+        h2 {
+            font-size: 32px;
+            margin-bottom: 26px;
+            font-weight: 700;
+        }
+        &.hide {
+            display: none;
+        }
+        p {
+            &.text-info {
+                color: #7c7c7c !important;
+                font-size: 12px;
+                font-weight: 800;
+                margin-top: 16px;
+                margin-bottom: 0px;
+            }
+        }
+        .form-check {
+            &.ss-form-radio {
+                position: relative;
+                margin-right: 10px;
+                .ss-radio {
+                    width: 20px;
+                    height: 20px;
+                    float: unset;
+                    margin-left: unset;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 30;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+                .ss-radio-label {
+                    font-family: "Montserrat", sans-serif !important;
+                    font-weight: 700;
+                    color: #333;
+                    font-size: 12px;
+                    margin-left: 3px;
+                    display: inline-block;
+                    &:before {
+                        @include psudo-common;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        top: 1px;
+                        left: 0px;
+                    }
+                    &:after {
+                        @include psudo-common;
+                        width: 10px;
+                        height: 10px;
+                        top: 6px;
+                        left: 5px;
+                        border-radius: 50%;
+                        transition: all 0.5s ease;
+                    }
+                }
+            }
+        }
+        .input-pair {
+            border: 2px solid #eeeeee;
+            border-radius: 4px;
+            margin-top: 12px;
+            background-color: #f6f6f6;
+            .form-group {
+                &.hourly {
+                    display: none !important;
+                }
+            }
+            .form-group {
+                position: relative;
+                width: 49%;
+                display: inline-block;
+                margin-bottom: 0;
+                &.seperator {
+                    border-right: 2px solid #eeeeee;
+                }
+                &.hourly {
+                    display: none;
+                }
+                .icon {
+                    position: absolute;
+                    font-size: 20px;
+                    top: 11px;
+                    left: 11px;
+                    color: #3a494e;
+                }
+                .form-control {
+                    border: none;
+                    background-color: transparent;
+                    padding-left: 45px;
+                    border-radius: 0px;
+                    color: #3a494e;
+                    height: 43px !important;
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 0.5px;
+                    &::-webkit-input-placeholder {
+                        font-weight: 300;
+                        font-size: 12px;
+                        color: #3a494e;
+                    }
+                    &:-ms-input-placeholder {
+                        font-weight: 300;
+                        font-size: 12px;
+                        color: #3a494e;
+                    }
+                    &::placeholder {
+                        font-weight: 300;
+                        font-size: 12px;
+                        color: #3a494e;
+                    }
+                }
+            }
+            &.tripair {
+                .form-group {
+                    &.hourly {
+                        border-top: 2px solid #eeeeee;
+                        display: block !important;
+                        width: 100%;
+                    }
+                    &.seperator {
+                        border-right: 2px solid #eeeeee;
+                        border-left: 2px solid #eeeeee;
+                    }
+                }
+            }
+        }
+        .ride-stops {
+            padding: 0;
+            margin-top: 12px;
+            li {
+                position: relative;
+                margin-bottom: 12px;
+                padding-right: 40px;
+                .move {
+                    display: inline-block;
+                    color: #dbdbdb;
+                    position: absolute;
+                    font-size: 25px;
+                    top: 3px;
+                    right: 0;
+                }
+                .ride-location {
+                    position: relative;
+                    .user-location {
+                        position: absolute;
+                        color: #c5c5c5;
+                        font-size: 18px;
+                        right: 15px;
+                        top: 9px;
+                    }
+                    .form-control {
+                        padding-right: 40px;
+                        border: 2px solid #eeeeee;
+                        border-radius: 4px;
+                        background-color: #f6f6f6;
+                        padding-left: 45px;
+                        color: #3a494e;
+                        height: 43px !important;
+                        font-size: 16px;
+                        font-weight: 600;
+                        letter-spacing: 0.5px;
+                        &::-webkit-input-placeholder {
+                            font-weight: 300;
+                            font-size: 12px;
+                            color: #979797;
+                        }
+                        &:-ms-input-placeholder {
+                            font-weight: 300;
+                            font-size: 12px;
+                            color: #979797;
+                        }
+                        &::placeholder {
+                            font-weight: 300;
+                            font-size: 12px;
+                            color: #979797;
+                        }
+                    }
+                    &.add-hops {
+                        padding-right: 60px;
+                        .add-new-hop {
+                            font-size: 14px;
+                            color: #c5c5c5;
+                            display: inline-block;
+                            background-color: #f6f6f6;
+                            padding: 11px 15px;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                        }
+                    }
+                }
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 13px;
+                    height: 13px;
+                    border: 1px solid #0fc500;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    top: 15px;
+                    left: 15px;
+                    z-index: 20;
+                }
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 43px;
+                    background-color: #0fc500;
+                    top: 27px;
+                    left: 21px;
+                    z-index: 20;
+                }
+                &:last-child {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .ride-details {
+        h2 {
+            color: #565656;
+            font-size: 22px;
+            padding: 15px;
+            border-bottom: 1px solid #c4c4c4;
+            .align-right {
+                display: inline-block;
+                float: right;
+                span {
+                    display: inline-block;
+                    color: #000;
+                    font-size: 12px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+                a {
+                    display: inline-block;
+                    font-size: 16px;
+                    color: #000;
+                    vertical-align: middle;
+                }
+            }
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 4px;
+            color: #565656;
+            text-align: right;
+        }
+        .ride-hops {
+            padding: 15px;
+            margin: 0;
+            li {
+                color: #565656;
+                font-size: 16px;
+                margin-bottom: 15px;
+                padding-left: 29px;
+                position: relative;
+                padding-left: 25px;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 50%;
+                    border: 1px solid #565656;
+                    top: 5px;
+                    left: 0;
+                }
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 22px;
+                    background-color: #565656;
+                    top: 20px;
+                    left: 5px;
+                }
+                &:last-child {
+                    margin: 0;
+                    &:after {
+                        display: none;
+                    }
+                }
+                a {
+                    font-weight: 700;
+                    color: #565656;
+                    display: inline-block;
+                    float: right;
+                    font-size: 12px;
+                    i {
+                        display: inline-block;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        p {
+            padding: 15px;
+            font-size: 12px;
+            text-align: right;
+            margin: 0 0 17px 0px;
+            border-bottom: 1px solid #c4c4c4;
+            box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.05);
+            i {
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 4px;
+            color: #565656;
+            text-align: right;
+        }
+        .vehicle-details {
+            border-radius: 2px;
+            border: 1px solid #e8e8e8;
+            transition: all 0.5s ease;
+            padding: 5px 0px;
+            margin-bottom: 5px;
+            &:hover {
+                border: 1px solid #0fc500;
+            }
+            img {
+                width: 40px;
+            }
+            p {
+                font-weight: 600;
+                font-size: 12px;
+                color: #000;
+                margin: 0;
+                padding: 0;
+                border: unset;
+                box-shadow: unset;
+                text-align: center;
+            }
+        }
+    }
+    &.rewards {
+        border: 2px solid #3fc706;
+        margin-top: -268px;
+        margin-bottom: 30px;
+        .booking-btn {
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 800;
+            width: 70%;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            border: none;
+            padding: 10px 0px;
+            margin-top: 31px;
+            margin-bottom: 30px;
+            &.btn-primary {
+                background-color: #0fc500 !important;
+                color: #fff;
+                &:hover {
+                    background-color: #0fc500 !important;
+                }
+            }
+        }
+        .form-group {
+            .form-control {
+                box-shadow: unset;
+            }
+            &.time-picker {
+                .timepicker-wrapper {
+                    background-color: $white;
+                    position: absolute;
+                    max-width: 100%;
+                    min-width: 180px;
+                    right: 0;
+                    z-index: 100;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                    transition: all 0.5s ease;
+                    opacity: 0;
+                    visibility: hidden;
+                    fieldset {
+                        background-color: $white;
+                        width: 100%;
+                        padding: 15px;
+                        z-index: 100;
+                        .btn {
+                            margin-top: 0;
+                            margin-bottom: 10px;
+                            color: $white;
+                            display: inline-block;
+                            width: 40px;
+                            height: 40px;
+                            padding: 0;
+                            font-size: 12px;
+                            &:last-child {
+                                margin-top: 10px;
+                                margin-bottom: 0px;
+                            }
+                        }
+                        .form-control {
+                            padding: 3px !important;
+                            font-size: 12px !important;
+                            font-weight: 500 !important;
+                            border: 2px solid #eeeeee !important;
+                            border-radius: 5px !important;
+                        }
+                    }
+                    .separator {
+                        padding: 10px 5px 5px 5px;
+                        border-top: 1px solid $light-gray;
+                        text-align: center;
+                        a {
+                            &.btn {
+                                padding: 5px 20px;
+                                font-size: 11px;
+                                display: block;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                &.show {
+                    .timepicker-wrapper {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        .location-info {
+            padding: 30px;
+            h2 {
+                font-size: 32px;
+                margin-bottom: 26px;
+                font-weight: 700;
+            }
+            &.hide {
+                display: none;
+            }
+            p {
+                &.text-info {
+                    color: #7c7c7c !important;
+                    font-size: 12px;
+                    font-weight: 800;
+                    margin-top: 16px;
+                    margin-bottom: 0px;
+                }
+            }
+            .input-pair {
+                border: 2px solid #eeeeee;
+                border-radius: 4px;
+                margin-top: 12px;
+                background-color: #f6f6f6;
+                .form-group {
+                    position: relative;
+                    width: 49%;
+                    display: inline-block;
+                    margin-bottom: 0;
+                    &.seperator {
+                        border-right: 2px solid #eeeeee;
+                    }
+                    .icon {
+                        position: absolute;
+                        font-size: 20px;
+                        top: 11px;
+                        left: 11px;
+                        color: #3a494e;
+                    }
+                    .form-control {
+                        border: none;
+                        background-color: transparent;
+                        padding-left: 45px;
+                        border-radius: 0px;
+                        color: #3a494e;
+                        height: 43px !important;
+                        font-size: 14px;
+                        font-weight: 400;
+                        letter-spacing: 0.5px;
+                        &::-webkit-input-placeholder {
+                            font-weight: 300;
+                            font-size: 12px;
+                            color: #3a494e;
+                        }
+                        &:-ms-input-placeholder {
+                            font-weight: 300;
+                            font-size: 12px;
+                            color: #3a494e;
+                        }
+                        &::placeholder {
+                            font-weight: 300;
+                            font-size: 12px;
+                            color: #3a494e;
+                        }
+                    }
+                }
+                &.tripair {
+                    .form-group {
+                        &.hourly {
+                            border-top: 2px solid #eeeeee;
+                            display: block !important;
+                            width: 100%;
+                        }
+                        &.seperator {
+                            border-right: 2px solid #eeeeee;
+                            border-left: 2px solid #eeeeee;
+                        }
+                    }
+                }
+            }
+            .ride-stops {
+                padding: 0;
+                margin-top: 12px;
+                li {
+                    position: relative;
+                    margin-bottom: 12px;
+                    padding-right: 0px;
+                    .move {
+                        display: inline-block;
+                        color: #dbdbdb;
+                        position: absolute;
+                        font-size: 25px;
+                        top: 3px;
+                        right: 0;
+                    }
+                    .ride-location {
+                        position: relative;
+                        .user-location {
+                            position: absolute;
+                            color: #c5c5c5;
+                            font-size: 18px;
+                            right: 15px;
+                            top: 9px;
+                        }
+                        .form-control {
+                            padding-right: 40px;
+                            border: 2px solid #eeeeee;
+                            border-radius: 4px;
+                            background-color: #f6f6f6;
+                            padding-left: 45px;
+                            color: #3a494e;
+                            height: 43px !important;
+                            font-size: 16px;
+                            font-weight: 600;
+                            letter-spacing: 0.5px;
+                            &::-webkit-input-placeholder {
+                                font-weight: 300;
+                                font-size: 12px;
+                                color: #979797;
+                            }
+                            &:-ms-input-placeholder {
+                                font-weight: 300;
+                                font-size: 12px;
+                                color: #979797;
+                            }
+                            &::placeholder {
+                                font-weight: 300;
+                                font-size: 12px;
+                                color: #979797;
+                            }
+                        }
+                        &.add-hops {
+                            padding-right: 60px;
+                            .add-new-hop {
+                                font-size: 14px;
+                                color: #c5c5c5;
+                                display: inline-block;
+                                background-color: #f6f6f6;
+                                padding: 11px 15px;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                            }
+                        }
+                    }
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        width: 13px;
+                        height: 13px;
+                        border: 1px solid #0fc500;
+                        background-color: #fff;
+                        border-radius: 50%;
+                        top: 15px;
+                        left: 15px;
+                        z-index: 20;
+                    }
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        width: 1px;
+                        height: 43px;
+                        background-color: #0fc500;
+                        top: 27px;
+                        left: 21px;
+                        z-index: 20;
+                    }
+                    &:last-child {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .ride-details {
+            h2 {
+                font-family: "Montserrat-SemiBold";
+                color: #565656;
+                font-size: 22px;
+                padding: 15px;
+                border-bottom: 1px solid #c4c4c4;
+                .align-right {
+                    display: inline-block;
+                    float: right;
+                    span {
+                        display: inline-block;
+                        color: #000;
+                        font-size: 12px;
+                        vertical-align: middle;
+                        margin-right: 10px;
+                    }
+                    a {
+                        display: inline-block;
+                        font-size: 16px;
+                        color: #000;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .ride-hops {
+                padding: 15px;
+                margin: 0;
+                li {
+                    color: #565656;
+                    font-size: 16px;
+                    margin-bottom: 15px;
+                    padding-left: 29px;
+                    position: relative;
+                    padding-left: 25px;
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        width: 13px;
+                        height: 13px;
+                        border-radius: 50%;
+                        border: 1px solid #565656;
+                        top: 5px;
+                        left: 0;
+                    }
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        width: 1px;
+                        height: 22px;
+                        background-color: #565656;
+                        top: 20px;
+                        left: 5px;
+                    }
+                    &:last-child {
+                        margin: 0;
+                        &:after {
+                            display: none;
+                        }
+                    }
+                    a {
+                        font-family: "Montserrat-SemiBold";
+                        color: #565656;
+                        display: inline-block;
+                        float: right;
+                        font-size: 12px;
+                        i {
+                            display: inline-block;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+            p {
+                padding: 15px;
+                font-size: 12px;
+                text-align: right;
+                margin: 0 0 17px 0px;
+                border-bottom: 1px solid #c4c4c4;
+                box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.05);
+                i {
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+            }
+            h3 {
+                font-family: "Montserrat-SemiBold";
+                font-size: 16px;
+                margin-top: 4px;
+                color: #565656;
+                text-align: right;
+            }
+            .vehicle-details {
+                border-radius: 2px;
+                border: 1px solid #e8e8e8;
+                transition: all 0.5s ease;
+                padding: 5px 0px;
+                margin-bottom: 5px;
+                &:hover {
+                    border: 1px solid #0fc500;
+                }
+                img {
+                    width: 40px;
+                }
+                p {
+                    font-family: "Montserrat-SemiBold";
+                    font-size: 12px;
+                    color: #000;
+                    margin: 0;
+                    padding: 0;
+                    border: unset;
+                    box-shadow: unset;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

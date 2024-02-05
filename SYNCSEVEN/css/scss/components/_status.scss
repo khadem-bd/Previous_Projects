@@ -1,0 +1,26 @@
+.status {
+    background-color: #C8C8C8;
+    width: 24px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 50px;
+    font-size: 0px;
+    position: relative;
+    .switch {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: 1.5px;
+        left: 2px;
+    }
+    &.active {
+        background-color: #0FC500;
+        .switch {
+            left: unset;
+            right: 2px;
+        }
+    }
+}

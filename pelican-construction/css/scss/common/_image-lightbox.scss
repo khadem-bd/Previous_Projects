@@ -1,0 +1,130 @@
+/*image lightbox*/
+
+.lightbox-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+    &.show {
+        visibility: visible;
+        opacity: 1;
+    }
+    img {
+        max-width: 70%;
+        max-height: 70%;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.freezebody {
+    overflow: hidden;
+}
+
+.goNext,
+.goPrev {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+
+.goNext {
+    right: 30px;
+}
+
+.goPrev {
+    left: 30px;
+}
+
+.goNext:before,
+.goPrev:before {
+    border-top: 1px solid #fff;
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+}
+
+.goNext:before {
+    border-right: 1px solid #fff;
+    transform: rotate(45deg);
+    right: 0;
+}
+
+.goPrev:before {
+    border-left: 1px solid #fff;
+    transform: rotate(-45deg);
+    left: 0;
+}
+
+.lightbox-close {
+    background-image: url(../images/lightbox-close.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.slideInLeft,
+.slideInRight,
+.slideInUp,
+.slideInDown {
+    position: relative;
+    transition: all 1s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.slideInLeft {
+    left: -50px;
+}
+
+.slideInRight {
+    right: -50px;
+}
+
+.slideInUp {
+    top: 50px;
+}
+
+.slideInDown {
+    top: -50px;
+}
+
+.slideInLeft.animated,
+.slideInRight.animated,
+.slideInUp.animated,
+.slideInDown.animated {
+    visibility: visible;
+    opacity: 1;
+}
+
+.slideInLeft.animated {
+    left: 0px;
+}
+
+.slideInRight.animated {
+    right: 0px;
+}
+
+.slideInUp.animated,
+.slideInDown.animated {
+    top: 0px;
+}

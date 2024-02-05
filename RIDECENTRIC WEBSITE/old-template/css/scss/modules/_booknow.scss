@@ -1,0 +1,61 @@
+.book-now{
+    .banner{
+        background-color: #F0EFEA;
+        padding: 70px 0px;
+        border-radius: $border-radius;
+        background-image: url(../images/booknow/art1.png), url(../images/booknow/art2.png);
+        background-position: left bottom, right bottom;
+        background-repeat: no-repeat, no-repeat;
+        h2{
+            font-size: 40px;
+            font-weight: 600;
+            color:$dark;
+            margin-bottom: 15px;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 400;
+            color:$dark;
+            margin-bottom: 40px;
+        }
+        a{
+            padding: 15px 30px;
+            background-color: $white;
+            display: inline-block;
+            border-radius: $btn-border-radius;
+            border:1px solid $green;
+            color:$green;
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+            box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1500px) {
+    .book-now{
+        .banner{
+            padding: 50px 0px;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .book-now{
+        .banner{
+            background-image: none;
+            padding: 50px 10px;
+            h2{
+                font-size: 20px;
+            }
+            p{
+                font-size: 14px;
+            }
+            a{
+                padding: 10px 30px;
+                font-size: 14px;
+            }
+        }
+    }
+}

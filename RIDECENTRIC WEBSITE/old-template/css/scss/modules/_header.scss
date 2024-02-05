@@ -1,0 +1,128 @@
+header{
+    position: absolute;
+    width:100%;
+    top:0;
+    left: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    z-index: 500;
+    .logo{
+        padding: 20px 0px;
+        display: $inlineblock;
+        img{
+            width: 200px;
+        }
+    }
+    nav{
+        text-align: right;
+        margin-top: 15px;
+        ul{
+            display: $inlineblock;
+            li{
+                display: $inlineblock;
+                padding: 0px 20px;
+                vertical-align: middle;
+                a{
+                    display: block;
+                    color:$white;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    span{
+                        color:$white;
+                        font-size: 14px;
+                        margin-right: 10px;
+                    }
+                    &.btn-link{
+                        padding: 10px 15px;
+                        border:1px solid $green;
+                        border-radius: $btn-border-radius;
+                        color:$green;
+                        transition:all 0.5s ease;
+                        &:hover{
+                            background-color: $green;
+                            color:$white;
+                            text-decoration: none;
+                        }
+                    }
+                    &.icon-link{
+                        color:$white;
+                        line-height: 0;
+                        span{
+                            font-size: 40px;
+                        }
+                    }
+                }
+                &:last-child{
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1500px) {
+    header{
+        .logo{
+            img{
+                width: 150px;
+            }
+        }
+        nav{
+            margin-top: 10px;
+            ul{
+                li{
+                    a{
+                        font-size: 14px;
+                        span{
+                            font-size: 12px;
+                        }
+                        &.icon-link{
+                            span{
+                                font-size: 38px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    header{
+        padding-bottom: 10px;
+        .logo-wrapper{
+            text-align: center;
+            .logo{
+                padding: 15px 0px 0px 0px;
+                img{
+                    width: 100;
+                }
+            }
+        }
+        nav{
+            text-align: left;
+            ul{
+                display: block;
+                li{
+                    &:first-child{
+                        padding-left: 0px;
+                    }
+                    &.ham-nav{
+                        float: right;
+                    }
+                    a{
+                        &.btn-link{
+                            font-size: 12px;
+                            padding: 5px 15px;
+                        }
+                        &.icon-link{
+                            span{
+                                font-size: 29px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

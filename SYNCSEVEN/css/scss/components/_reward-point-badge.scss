@@ -1,0 +1,135 @@
+.reward-poing-badge {
+    position: relative;
+    border-radius: 4px;
+    padding:15px;
+    margin-top: 20px;
+    min-height: 330px;
+    img {
+        width: 80px;
+    }
+
+    .lock{
+        font-size: 16px;
+        display: inline-block;
+        position: absolute;
+        top:20px;
+        right:30px;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    p {
+        font-size: 12px;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        li {
+            position: relative;
+            padding-left: 40px;
+
+            &:before {
+                @include psudo-common;
+                background-color: #02BE14;
+                border-radius: 50%;
+                width: 22px;
+                height: 22px;
+                left: 0;
+                top: 0;
+                z-index: 5;
+            }
+
+            &:after {
+                @include psudo-common;
+                width: 5px;
+                height: 10px;
+                border-bottom: 2px solid #fff;
+                border-right: 2px solid #fff;
+                left: 8px;
+                top: 5px;
+                z-index: 10;
+                transform: rotate(45deg);
+            }
+
+            h3 {
+                font-size: 14px;
+                font-weight: 700;
+                margin-bottom: 7px;
+            }
+
+            p {
+                font-size: 12px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    &.light-blue{
+        background-color: #C0D9FF;
+    }
+    &.golden{
+        background-color: #F1CA68;
+    }
+    &.platinum{
+        background-color: #848C90;
+        .lock{
+            color:$white;
+        }
+        h2{
+            color:$white;
+        }
+        p{
+            color:$white;
+        }
+        h3{
+            color:$white;
+        }
+        ul{
+            li{
+                h3{
+                    color:$white;
+                }
+                p{
+                    color:$white;
+                }
+            }
+        }
+    }
+
+    &.titanium{
+        background-color: #181919;
+        .lock{
+            color:$white;
+        }
+        h2{
+            color:$white;
+        }
+        p{
+            color:$white;
+        }
+        h3{
+            color:$white;
+        }
+        ul{
+            li{
+                h3{
+                    color:$white;
+                }
+                p{
+                    color:$white;
+                }
+            }
+        }
+    }
+}

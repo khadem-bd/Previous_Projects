@@ -1,0 +1,161 @@
+// Text Related Styling
+@mixin processText($displayType, $fontSize, $fontWeight, $color, $margin, $padding, $alignment, $textTransform, $position, $transition) {
+    @if $displayType !=false {
+        display: $displayType;
+    }
+
+    @if $fontSize !=false {
+        font-size: $fontSize;
+    }
+
+    @if $fontWeight !=false {
+        font-weight: $fontWeight;
+    }
+
+    @if $color !=false {
+        color: $color;
+    }
+
+    @if $margin !=false {
+        margin: $margin;
+    }
+
+    @if $padding !=false {
+        padding: $padding;
+    }
+
+    @if $alignment !=false {
+        text-align: $alignment;
+    }
+
+    @if $textTransform !=false {
+        text-transform: $textTransform;
+    }
+
+    @if $position !=false {
+        position: $position;
+    }
+
+    @if $transition !=false {
+        transition: $transition;
+    }
+}
+
+// psudeoclass before after
+@mixin beforeAfter($top, $left, $bottom, $right, $width, $height, $background, $borderRadius, $opacity, $transition) {
+    position: absolute;
+    content: "";
+
+    @if $top !=false {
+        top: $top;
+    }
+
+    @if $left !=false {
+        left: $left;
+    }
+
+    @if $bottom !=false {
+        bottom: $bottom;
+    }
+
+    @if $right !=false {
+        right: $right;
+    }
+
+    @if $transition !=false {
+        transition: $transition;
+    }
+
+    width: $width;
+    height: $height;
+    background-color: $background;
+    border-radius: $borderRadius;
+}
+
+//before after hover action
+@mixin beforeAfterHover($top, $left, $bottom, $right, $width, $height, $background, $opacity) {
+    @if $top !=false {
+        top: $top;
+    }
+
+    @if $left !=false {
+        left: $left;
+    }
+
+    @if $bottom !=false {
+        bottom: $bottom;
+    }
+
+    @if $right !=false {
+        right: $right;
+    }
+
+    @if $width !=false {
+        width: $width;
+    }
+
+    @if $height !=false {
+        height: $height;
+    }
+
+    @if $background !=false {
+        background-color: $background;
+    }
+
+    @if $opacity !=false {
+        opacity: $opacity;
+    }
+}
+
+// button style
+@mixin btnStyle($displayType, $width, $height, $margin, $padding, $border, $borderRadius, $boxShadow, $fontSize, $fontWeight, $textColor, $alignment, $backgroundColor, $textTransform, $position, $transition) {
+    @if $displayType !=false {
+        display: $displayType;
+    }
+
+    @if $width !=false {
+        width: $width;
+    }
+
+    @if $height !=false {
+        height: $height;
+    }
+
+    @if $margin !=false {
+        margin: $margin;
+    }
+
+    @if $padding !=false {
+        padding: $padding;
+    }
+
+    @if $border !=false {
+        border: $border;
+    }
+
+    @if $borderRadius !=false {
+        border-radius: $borderRadius;
+    }
+
+    @if $boxShadow !=false {
+        box-shadow: $boxShadow;
+    }
+
+    @if $backgroundColor !=false {
+        background-color: $backgroundColor;
+    }
+
+    @if $position !=false {
+        position: $position;
+    }
+
+    @if $transition !=false {
+        transition: $transition;
+    }
+
+    @if $alignment !=false {
+        text-align: $alignment;
+    }
+
+    @include processText(false, $fontSize, $fontWeight, $textColor, false, false, false, $textTransform, false, false);
+}

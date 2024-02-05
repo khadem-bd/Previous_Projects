@@ -1,0 +1,277 @@
+$route: "./../../font/icons/";
+$code: "rcrxf5";
+@font-face {
+    font-family: 'syncseven';
+    src: url($route + 'syncseven.eot?' + $code);
+    src: url($route + 'syncseven.eot?'+ $code +'#iefix') format('embedded-opentype'), url($route + 'syncseven.woff2?' + $code) format('woff2'), url($route + 'syncseven.ttf?' + $code) format('truetype'), url($route + 'syncseven.woff?' + $code) format('woff'), url($route + 'syncseven.svg?' + $code + '#syncseven') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="ss-"],
+[class*=" ss-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'syncseven' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ss-tailed-left-arrow:before {
+    content: "\e93c";
+}
+
+.ss-tailed-top-arrow:before {
+    content: "\e93d";
+}
+
+.ss-tailed-bottom-arrow:before {
+    content: "\e93e";
+}
+
+.ss-square-tick:before {
+    content: "\e93b";
+}
+
+.ss-plus:before {
+    content: "\e939";
+}
+
+.ss-move:before {
+    content: "\e93a";
+}
+
+.ss-action-vertical:before {
+    content: "\e938";
+}
+
+.ss-shift-week-prev:before {
+    content: "\e936";
+}
+
+.ss-shift-week-next:before {
+    content: "\e937";
+}
+
+.ss-find-ride:before {
+    content: "\e929";
+}
+
+.ss-show-hide-column:before {
+    content: "\e92a";
+}
+
+.ss-dispatch-filter:before {
+    content: "\e92b";
+}
+
+.ss-ride-history:before {
+    content: "\e92c";
+}
+
+.ss-incident:before {
+    content: "\e92d";
+}
+
+.ss-add-deposit:before {
+    content: "\e92e";
+}
+
+.ss-close:before {
+    content: "\e92f";
+}
+
+.ss-send-chauffuer-link:before {
+    content: "\e930";
+}
+
+.ss-link:before {
+    content: "\e931";
+}
+
+.ss-mail:before {
+    content: "\e932";
+}
+
+.ss-tick:before {
+    content: "\e933";
+}
+
+.ss-flight-status:before {
+    content: "\e934";
+}
+
+.ss-reset:before {
+    content: "\e935";
+}
+
+.ss-hamburger:before {
+    content: "\e928";
+}
+
+.ss-reload:before {
+    content: "\e927";
+}
+
+.ss-checked:before {
+    content: "\e91c";
+}
+
+.ss-unchecked:before {
+    content: "\e91d";
+}
+
+.ss-rounded-plus:before {
+    content: "\e91e";
+}
+
+.ss-action:before {
+    content: "\e91f";
+}
+
+.ss-document:before {
+    content: "\e920";
+}
+
+.ss-location:before {
+    content: "\e921";
+}
+
+.ss-edit:before {
+    content: "\e922";
+}
+
+.ss-filter:before {
+    content: "\e923";
+}
+
+.ss-dollar:before {
+    content: "\e924";
+}
+
+.ss-car:before {
+    content: "\e925";
+}
+
+.ss-square-plus:before {
+    content: "\e926";
+}
+
+.ss-star-filled:before {
+    content: "\e919";
+}
+
+.ss-gift:before {
+    content: "\e91a";
+}
+
+.ss-tube:before {
+    content: "\e91b";
+}
+
+.ss-right-arrow:before {
+    content: "\e909";
+}
+
+.ss-left-arrow:before {
+    content: "\e90a";
+}
+
+.ss-top-arrow:before {
+    content: "\e90b";
+}
+
+.ss-bottom-arrow:before {
+    content: "\e90c";
+}
+
+.ss-triangle:before {
+    content: "\e90d";
+}
+
+.ss-calander:before {
+    content: "\e90e";
+}
+
+.ss-clock:before {
+    content: "\e90f";
+}
+
+.ss-user-location:before {
+    content: "\e910";
+}
+
+.ss-passenger:before {
+    content: "\e911";
+}
+
+.ss-luggage:before {
+    content: "\e912";
+}
+
+.ss-unlock:before {
+    content: "\e913";
+}
+
+.ss-lock:before {
+    content: "\e914";
+}
+
+.ss-search:before {
+    content: "\e915";
+}
+
+.ss-card:before {
+    content: "\e916";
+}
+
+.ss-hotcup:before {
+    content: "\e917";
+}
+
+.ss-star:before {
+    content: "\e918";
+}
+
+.ss-settings:before {
+    content: "\e905";
+}
+
+.ss-help:before {
+    content: "\e906";
+}
+
+.ss-notification:before {
+    content: "\e907";
+}
+
+.ss-megamenu:before {
+    content: "\e908";
+}
+
+.ss-user:before {
+    content: "\e900";
+}
+
+.ss-rounded-cross:before {
+    content: "\e901";
+}
+
+.ss-tailed-right-arrow:before {
+    content: "\e902";
+}
+
+.ss-eye:before {
+    content: "\e903";
+}
+
+.ss-eye-closed:before {
+    content: "\e904";
+}

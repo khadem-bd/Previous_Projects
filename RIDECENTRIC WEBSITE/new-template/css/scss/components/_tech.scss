@@ -1,0 +1,203 @@
+
+.canvas-section {
+    h2.savvy-title {
+        margin-bottom: 0;
+    }
+}
+
+.gds-tech {
+    padding: 200px 0px;
+    .tech-logo-img{
+        img {
+            width: 309px;
+        }
+
+    }
+}
+
+.tech-coverage{
+    h2{
+        &.section-title{
+            padding-left: 0;
+            &::before{
+                display: none;
+            }
+        }
+    }
+        .flip-box-back {
+            p{
+                font-weight: 600;
+            }
+
+        }
+}
+.tech-alerts{
+    img {
+        width: 100%;
+        &.mobile-app {
+            margin-top: -50px;
+        }
+    }
+}
+
+.reserve-section {
+    .icon-long-arrow {
+        font-size: 60px;
+        color: #0376F9;
+        margin-left: 40px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .tech, .gds-tech {
+        padding: 80px 0 80px;
+        &.pb-small{
+            padding-bottom: 0 !important;
+        }
+        h2{
+            &.section-title{
+                padding-left: 0 !important;
+            }
+        }
+    
+    }
+    .gds-tech{
+        .gds-mbl-pad{
+            padding-bottom: 30px;
+        }
+        img{
+            margin-bottom: 0;
+        }
+    }
+    .tech-alerts{
+        img{
+            max-width: 200px;
+        }
+    }
+    .manifest{
+
+        .pc-img{
+            position: absolute;
+            width: 600px !important;
+            right: -30px;
+            top: -70px;
+
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+    .innerpage-banner{
+        h2{
+            font-size: 24px !important;
+            line-height: 29px !important;
+        }
+    }
+
+    .tech-banner{
+        height: 50vh;
+    }
+    .canvas-section{
+        h2{
+            &.savvy-title {
+                    font-size: 24px !important;
+                }
+        }
+    }   
+    .tech, .gds-tech {
+        padding: 80px 0 80px;
+        &.pb-small{
+            padding-bottom: 0 !important;
+        }
+        h2{
+            font-size: 20px !important;
+            line-height: 25px !important;
+            &.section-title{
+                padding-left: 0 !important;
+            }
+            &.title-mb{
+                margin-bottom: 0 !important;
+            }
+        }
+    
+    }
+    .gds-tech{
+        .gds-mbl-pad{
+            padding-bottom: 30px;
+        }
+        img{
+            margin-bottom: 0;
+        }
+    }
+    .tech-alerts{
+        img{
+            max-width: 200px;
+        }
+        h2{
+            margin-bottom: 0;
+        }
+        .left-pad{
+            padding: 80px 15px;
+        }
+        img {
+            width: 100%;
+
+            &.mobile-app {
+                margin-top: 44px !important;
+            }
+        }
+    }
+    .tech-slogan{
+        padding-bottom: 0;
+    }
+    .tech-coverage{
+        h2{
+            &.savvy-title{
+                font-size: 24px !important;
+            }
+        }
+        .flip-box {
+            height: 150px !important;
+
+            .flip-box-front{
+                height: 150px;
+                padding-left: 30px !important;
+                    h2 {
+                        font-size: 18px !important;
+                    }
+                    img{
+                        bottom: -7px;
+                        right: 50px;
+                        width: 90px;
+                        &.flight-data{
+                            width: 120px;
+                        }
+                    }
+                   &.alternate{
+                    padding-right: 30px;
+                    img{
+                        left: 30px !important;
+                        width: 120px;
+                    }
+                    
+                   }
+                .plus-btn{
+                    width: 22px;
+                    height: 22px;
+                    right: 15px;
+                    bottom: 15px;
+                    .icon{
+                        font-size: 10px;
+                    }
+                }   
+                 
+            }
+            .flip-box-back {
+                height: 150px;
+                h2 {
+                    font-size: 18px !important;
+                }
+            }
+        }
+    }
+}

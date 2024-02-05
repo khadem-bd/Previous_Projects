@@ -1,0 +1,92 @@
+.projectpage {
+    .highlighted-img {
+        border-radius: 50px;
+        width: 100%;
+        margin-bottom: 50px;
+        box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.17);
+    }
+    .text-padding {
+        padding-left: 50px;
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #191918;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #191918;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+    }
+    .image-carousel {
+        li {
+            padding: 0px 15px;
+            &:before {
+                display: none;
+            }
+            a {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .slick-arrow {
+            border: none;
+            background-color: transparent;
+            text-indent: -9999px;
+            width: 17px;
+            height: 32px;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            &:focus {
+                outline: none;
+            }
+        }
+        .slick-prev {
+            background-image: url(../images/left-arrow.png);
+            left: -20px;
+        }
+        .slick-next {
+            background-image: url(../images/right-arrow.png);
+            right: -20px;
+        }
+    }
+    .slick-dots {
+        text-align: center;
+        margin-top: 15px;
+        li {
+            display: inline-block;
+            padding: 0 !important;
+            margin: 0px 2px;
+            button {
+                background-color: transparent;
+                text-indent: -9999px;
+                width: 15px;
+                height: 15px;
+                border: 1px solid #ccc;
+                border-radius: 50%;
+                padding: 0;
+            }
+            &.slick-active {
+                button {
+                    border: 1px solid #27aae1;
+                    background-color: #27aae1;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .projectpage .text-padding {
+        padding-left: 0px;
+    }
+}

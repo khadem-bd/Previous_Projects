@@ -1,0 +1,41 @@
+.aboutus {
+    background-color: $white;
+    background-image: url(../images/aboutusbg.svg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 50px 200px;
+    p {
+        font-size: 20px;
+        color: #9b9b98;
+        line-height: 36px;
+        font-weight: 400;
+        margin-top: 0px;
+        &.bold {
+            font-weight: 600;
+            color: $dark;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1500px) {
+    .aboutus {
+        padding: 50px 100px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1200px) {
+    .aboutus {
+        padding: 50px 50px;
+        p {
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .aboutus {
+        padding: 50px 0px;
+    }
+}

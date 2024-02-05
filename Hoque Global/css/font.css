@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "gothamblack";
+    src: url("../font/text-font/gotham-black-webfont.eot");
+    src: url("../font/text-font/gotham-black-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gotham-black-webfont.woff2") format("woff2"), url("../font/text-font/gotham-black-webfont.woff") format("woff"), url("../font/text-font/gotham-black-webfont.ttf") format("truetype"), url("../font/text-font/gotham-black-webfont.svg#gothamblack") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothambold";
+    src: url("../font/text-font/gotham-bold-webfont.eot");
+    src: url("../font/text-font/gotham-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gotham-bold-webfont.woff2") format("woff2"), url("../font/text-font/gotham-bold-webfont.woff") format("woff"), url("../font/text-font/gotham-bold-webfont.ttf") format("truetype"), url("../font/text-font/gotham-bold-webfont.svg#gothambold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothambold";
+    src: url("../font/text-font/gothambold-webfont.eot");
+    src: url("../font/text-font/gothambold-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gothambold-webfont.woff2") format("woff2"), url("../font/text-font/gothambold-webfont.woff") format("woff"), url("../font/text-font/gothambold-webfont.ttf") format("truetype"), url("../font/text-font/gothambold-webfont.svg#gothambold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothambold_italic";
+    src: url("../font/text-font/gothambolditalic-webfont.eot");
+    src: url("../font/text-font/gothambolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gothambolditalic-webfont.woff2") format("woff2"), url("../font/text-font/gothambolditalic-webfont.woff") format("woff"), url("../font/text-font/gothambolditalic-webfont.ttf") format("truetype"), url("../font/text-font/gothambolditalic-webfont.svg#gothambold_italic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothambook";
+    src: url("../font/text-font/gothambook-webfont.eot");
+    src: url("../font/text-font/gothambook-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gothambook-webfont.woff2") format("woff2"), url("../font/text-font/gothambook-webfont.woff") format("woff"), url("../font/text-font/gothambook-webfont.ttf") format("truetype"), url("../font/text-font/gothambook-webfont.svg#gothambook") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothambookitalic";
+    src: url("../font/text-font/gotham-bookitalic-webfont.eot");
+    src: url("../font/text-font/gotham-bookitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gotham-bookitalic-webfont.woff2") format("woff2"), url("../font/text-font/gotham-bookitalic-webfont.woff") format("woff"), url("../font/text-font/gotham-bookitalic-webfont.ttf") format("truetype"), url("../font/text-font/gotham-bookitalic-webfont.svg#gothambookitalic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothambook_italic";
+    src: url("../font/text-font/gothambookitalic-webfont.eot");
+    src: url("../font/text-font/gothambookitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gothambookitalic-webfont.woff2") format("woff2"), url("../font/text-font/gothambookitalic-webfont.woff") format("woff"), url("../font/text-font/gothambookitalic-webfont.ttf") format("truetype"), url("../font/text-font/gothambookitalic-webfont.svg#gothambook_italic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothamlight";
+    src: url("../font/text-font/gotham-light-webfont.eot");
+    src: url("../font/text-font/gotham-light-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gotham-light-webfont.woff2") format("woff2"), url("../font/text-font/gotham-light-webfont.woff") format("woff"), url("../font/text-font/gotham-light-webfont.ttf") format("truetype"), url("../font/text-font/gotham-light-webfont.svg#gothamlight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothamlight";
+    src: url("../font/text-font/gothamlight-webfont.eot");
+    src: url("../font/text-font/gothamlight-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gothamlight-webfont.woff2") format("woff2"), url("../font/text-font/gothamlight-webfont.woff") format("woff"), url("../font/text-font/gothamlight-webfont.ttf") format("truetype"), url("../font/text-font/gothamlight-webfont.svg#gothamlight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothamlight_italic";
+    src: url("../font/text-font/gothamlightitalic-webfont.eot");
+    src: url("../font/text-font/gothamlightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gothamlightitalic-webfont.woff2") format("woff2"), url("../font/text-font/gothamlightitalic-webfont.woff") format("woff"), url("../font/text-font/gothamlightitalic-webfont.ttf") format("truetype"), url("../font/text-font/gothamlightitalic-webfont.svg#gothamlight_italic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothammedium";
+    src: url("../font/text-font/gothammedium-webfont.eot");
+    src: url("../font/text-font/gothammedium-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gothammedium-webfont.woff2") format("woff2"), url("../font/text-font/gothammedium-webfont.woff") format("woff"), url("../font/text-font/gothammedium-webfont.ttf") format("truetype"), url("../font/text-font/gothammedium-webfont.svg#gothammedium") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothammedium";
+    src: url("../font/text-font/gothammedium_1-webfont.eot");
+    src: url("../font/text-font/gothammedium_1-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gothammedium_1-webfont.woff2") format("woff2"), url("../font/text-font/gothammedium_1-webfont.woff") format("woff"), url("../font/text-font/gothammedium_1-webfont.ttf") format("truetype"), url("../font/text-font/gothammedium_1-webfont.svg#gothammedium") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothammedium";
+    src: url("../font/text-font/gothammediumitalic-webfont.eot");
+    src: url("../font/text-font/gothammediumitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gothammediumitalic-webfont.woff2") format("woff2"), url("../font/text-font/gothammediumitalic-webfont.woff") format("woff"), url("../font/text-font/gothammediumitalic-webfont.ttf") format("truetype"), url("../font/text-font/gothammediumitalic-webfont.svg#gothammedium") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothamthin";
+    src: url("../font/text-font/gotham-thin-webfont.eot");
+    src: url("../font/text-font/gotham-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gotham-thin-webfont.woff2") format("woff2"), url("../font/text-font/gotham-thin-webfont.woff") format("woff"), url("../font/text-font/gotham-thin-webfont.ttf") format("truetype"), url("../font/text-font/gotham-thin-webfont.svg#gothamthin") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothamthinitalic";
+    src: url("../font/text-font/gotham-thinitalic-webfont.eot");
+    src: url("../font/text-font/gotham-thinitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gotham-thinitalic-webfont.woff2") format("woff2"), url("../font/text-font/gotham-thinitalic-webfont.woff") format("woff"), url("../font/text-font/gotham-thinitalic-webfont.ttf") format("truetype"), url("../font/text-font/gotham-thinitalic-webfont.svg#gothamthinitalic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothamultraitalic";
+    src: url("../font/text-font/gotham-ultraitalic-webfont.eot");
+    src: url("../font/text-font/gotham-ultraitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gotham-ultraitalic-webfont.woff2") format("woff2"), url("../font/text-font/gotham-ultraitalic-webfont.woff") format("woff"), url("../font/text-font/gotham-ultraitalic-webfont.ttf") format("truetype"), url("../font/text-font/gotham-ultraitalic-webfont.svg#gothamultraitalic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothamxlight";
+    src: url("../font/text-font/gotham-xlight-webfont.eot");
+    src: url("../font/text-font/gotham-xlight-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gotham-xlight-webfont.woff2") format("woff2"), url("../font/text-font/gotham-xlight-webfont.woff") format("woff"), url("../font/text-font/gotham-xlight-webfont.ttf") format("truetype"), url("../font/text-font/gotham-xlight-webfont.svg#gothamxlight") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "gothamxlightitalic";
+    src: url("../font/text-font/gotham-xlightitalic-webfont.eot");
+    src: url("../font/text-font/gotham-xlightitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/text-font/gotham-xlightitalic-webfont.woff2") format("woff2"), url("../font/text-font/gotham-xlightitalic-webfont.woff") format("woff"), url("../font/text-font/gotham-xlightitalic-webfont.ttf") format("truetype"), url("../font/text-font/gotham-xlightitalic-webfont.svg#gothamxlightitalic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}

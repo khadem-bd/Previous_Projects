@@ -1,0 +1,235 @@
+.bottom-links {
+    background-color: #181717;
+    padding: 100px 0px;
+    min-height: unset;
+
+    .phone-number {
+        color: $white;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+
+        .icon {
+            color: $green;
+            @include inlineblock;
+            margin-right: 10px;
+        }
+    }
+
+    .tagline {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 39px;
+        color: #FFFFFF;
+        margin: 0;
+        text-align: right;
+
+        .highlighted {
+            font-weight: 700;
+            border-bottom: 2px solid $green;
+            @include inlineblock;
+            padding-bottom: 7px;
+        }
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 49px;
+        color: #FFFFFF;
+    }
+
+    .h2-margin{
+        margin-top: 80px;
+    }
+
+    .footer-links {
+        margin-top: 10px;
+
+        li {
+            @include inlineblock;
+            margin-right: 30px;
+
+            a {
+                @include inlineblock;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                color: #FFFFFF;
+            }
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    
+
+    .footer-graphics {
+        height: 220px;
+        background-image: url(../images/footer/footer-graphics.svg);
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include relative;
+        overflow: hidden;
+
+        &::after {
+            @include psudoelem;
+            width: 100%;
+            height: 4px;
+            background-color: #3DB54A;
+            left: 0;
+            bottom: 0;
+        }
+
+        .car {
+            @include absolute;
+            left: -100px;
+            bottom: 4px;
+            transition: all 0.5s ease;
+            z-index: 10;
+            animation-name: running-car;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes running-car {
+            from {
+                left: -100px;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .bottom-links .tagline {
+        text-align: left;
+        font-size: 22px;
+
+        img {
+            height: 20px;
+        }
+    }
+
+    .bottom-links h2 {
+        font-size: 20px !important;
+        line-height: 16px !important;
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+
+    .bottom-links .footer-links {
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .bottom-links {
+        padding: 80px 0;
+        .phone-number {
+                font-size: 12px !important;
+                line-height: 20px;
+            }
+            .tagline{
+                font-size: 12px;
+                line-height: 12px;
+                img{
+                    height: 12px;
+                }
+                .highlighted {
+                    padding-bottom: 2px;
+                    border-bottom: 1px solid $green;
+                }
+            }
+        h2{
+            padding-left: 0 !important;
+        }
+        .h2-margin {
+            margin-top: 30px;
+        }
+        .footer-links li {
+                display: block;
+                margin-right: 0px;
+            }
+
+        .footer-cta{
+            a{
+                padding: 10px 30px;
+                font-size: 14px;
+                line-height: 14px;
+            }
+        }
+    }
+    .bottom-links .footer-graphics {
+      height: 120px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+    .bottom-links {
+        padding: 50px 0;
+        .phone-number {
+                font-size: 10px !important;
+                line-height: 10px !important;
+            }
+        
+            .tagline {
+                font-size: 10px;
+                line-height: 10px;
+                text-align: left;
+        
+                img {
+                    height: 10px;
+                }
+                .highlighted {
+                    padding-bottom: 2px;
+                    border-bottom: 1px solid $green;
+                }
+            }
+            
+        
+            h2 {
+                padding-left: 0 !important;
+            }
+     
+
+        .footer-links li {
+                display: block;
+                margin-right: 0px;
+            }
+
+        .footer-cta{
+            a{
+                padding: 10px 22px;
+                    margin-top: 10px;
+                    background-color: #0376F9;
+                    font-size: 12px;
+                }
+            }
+        .btn-primary {
+            padding: 12px 32px;
+            margin-top: 10px;
+            background-color: #0FC500 !important;
+            font-size: 14px;
+        }
+        
+        }
+        .bottom-links .phone-number .icon {
+            margin-right: 5px;
+        }
+        .fullpage-menu .nav-list ul.bottom-item li a span.pipe-icon {
+            font-size: 12px;
+            font-weight: 700;
+            color: #282828;
+        }
+
+    }
+
+

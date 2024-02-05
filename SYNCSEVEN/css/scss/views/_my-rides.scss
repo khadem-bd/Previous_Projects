@@ -1,0 +1,22 @@
+.my-rides-header{
+    border-bottom: 1px solid #E5E5E5;
+    p{
+        font-size: 16px;
+        padding: 10px 0px 10px 10px;
+    }
+}
+
+.tbl-my-rides {
+    border:1px solid #EEEEEE;
+    @extend .dispatch-info;
+    table{
+        tr{
+            td{
+                font-size: 11px;
+                color:#777171;
+                line-height: 22px;
+               
+            }
+        }
+    }
+}

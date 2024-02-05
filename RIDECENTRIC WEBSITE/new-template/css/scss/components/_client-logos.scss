@@ -1,0 +1,129 @@
+.client-logos {
+    overflow-x: hidden;
+    padding: 150px 0px;
+
+    h2 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 39px;
+        color: #181717;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .logo-carousel {
+        li {
+            width: 16%;
+            height: 140px;
+            margin: 0 20px;
+            @include inlineblock;
+            @include relative;
+            transition: all 0.5s ease;
+
+            img {
+                width: 70%;
+                @include absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: all 0.5s ease;
+                filter: grayscale(100);
+                opacity: .5;
+
+                &.small-width {
+                    width: 40%;
+                }
+                &.ex-small{
+                    width: 30%;
+                }
+                &.sounder-img{
+                    width: 50px;
+                }
+                &.omni-logo{
+                    width: 100%;
+                }
+                &:last-child {
+                    opacity: 0;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.1, 1.1);
+
+                img {
+                    &:first-child {
+                        opacity: 0;
+                        filter: grayscale(0);
+                    }
+
+                    &:last-child {
+                        opacity: 1;
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1200px) {
+    .client-logos h2 {
+        font-size: 32px;
+        line-height: 39px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .client-logos {
+        padding: 200px 0px 80px;
+    }
+    .client-logos h2 {
+        font-size: 22px;
+        line-height: 39px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+    .client-logos {
+        padding: 180px 0px 80px;
+        .logo-carousel {
+            li {
+                height: 80px;
+                img{
+                    height: 70px;
+                    &.korean-logo {
+                        width: 100%;
+                        height: 15px !important;
+                    }
+                    &.qatar-airways{
+                        width: 100%;
+                        height: 40px;
+                    }
+                    &.omni-logo{
+                        width: 150px !important;
+                        height: 170px !important;
+                    }
+                    &.marriott{
+                        height: 40px !important;
+                    }
+                    &.westin{
+                        height: 40px;
+                    }
+                   
+               
+            }
+        }
+    }
+    .client-logos h2 {
+        font-size: 22px;
+        line-height: 39px;
+    }
+
+}
+}

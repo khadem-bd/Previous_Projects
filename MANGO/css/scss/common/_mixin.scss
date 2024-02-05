@@ -1,0 +1,121 @@
+// Text Related Styling
+@mixin processText($color, $font-weight, $font-size, $margin) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    margin: $margin;
+}
+
+// Custom Checkbox
+
+@mixin chkbox_bg($color, $width, $height, $top, $left, $border-radius, $elementState) {
+    @include beforeAfter($top, $left, $width, $height);
+    width: $width;
+    height: $height;
+    border-radius: $border-radius;
+    transition: all 0.5s ease;
+
+    @if $elementState == 0 {
+        background-color: transparent;
+        border: 1px solid #353535;
+    }
+
+    @else if $elementState == 1 {
+        background-color: $color;
+        border: 1px solid $color;
+    }
+}
+
+@mixin chkbox_tick($width, $height, $color, $top, $left, $elementState) {
+    @include beforeAfter($top, $left, $width, $height);
+    border-right: 1px solid $color;
+    border-bottom: 1px solid $color;
+    transform: rotate(40deg);
+    transition: all 0.5s ease;
+
+    @if $elementState == 0 {
+        opacity: 0;
+    }
+
+    @else if $elementState == 1 {
+        opacity: 1;
+    }
+}
+
+//custom radio button
+
+@mixin custom_radio_btn($outerCircleWidth, $outerCircleHeight, $outerCircleColor, $outerCircleTop, $outerCircleLeft, $innerCircleWidth, $innerCircleHeight, $innerCircleColor, $innerCircleTop, $innerCircleLeft, $elementState){
+    &:before{
+        @include beforeAfter($outerCircleTop, $outerCircleLeft, $outerCircleWidth, $outerCircleHeight);
+        border: 1px solid $outerCircleColor;
+        border-radius: 50%;
+    }
+
+    &:after{
+        @include beforeAfter($innerCircleTop, $innerCircleLeft, $innerCircleWidth, $innerCircleHeight);
+        background-color: $innerCircleColor;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.5s ease;
+        @if $elementState == false {
+            opacity: 0;
+        }@else if $elementState == true {
+            opacity: 1;
+        }
+    }
+}
+
+// psudeoclass before after
+@mixin beforeAfter($top, $left, $width, $height) {
+    position: absolute;
+    content: "";
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+// button style
+@mixin btnStyle($isborder, $borderColor, $borderRadius, $padding, $isFluid, $color, $font-weight, $font-size, $margin){
+    @include processText($color, $font-weight, $font-size, $margin);
+    border-radius: $borderRadius;
+    
+    padding: $padding;
+    @if $isborder == true {
+        border:1px solid $borderColor;
+    }@else if $isborder == false {
+        border: unset;
+    }
+    @if $isFluid == true {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }@else if $isFluid == false {
+        display: inline-block;
+    }
+}
+
+//custom checkbox switch
+
+@mixin checkboxSwitch($outerWidth, $outerHeight, $outerInactiveColor, $outerActiveColor, $outerTop, $outerLeft, $innerWidth, $innerHeight, $innerColor, $innerTop, $innerLeft, $innerActiveLeft, $elementState){
+    &:before{
+        @include beforeAfter($outerTop, $outerLeft, $outerWidth, $outerHeight);
+        transition: all 0.5s ease;
+        border-radius: 50px;
+        @if $elementState == false {
+            background-color:$outerInactiveColor;
+        }@else if $elementState == true{
+            background-color: $outerActiveColor;
+        }
+    }
+
+    &:after{
+        @include beforeAfter($innerTop, $innerLeft, $innerWidth, $innerHeight);
+        background-color: $innerColor;
+        border-radius: 50%;
+        transition: all 0.5s ease;
+        @if $elementState == true {
+            left: $innerActiveLeft;
+        }
+    }
+}

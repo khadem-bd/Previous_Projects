@@ -1,0 +1,127 @@
+$route: "../font/icon-font/";
+$fontCode: "per9m9";
+
+@font-face {
+    font-family: 'icomoon';
+    src: url($route + 'icomoon.eot?' + $fontCode);
+    src: url($route + 'icomoon.eot?' + $fontCode + '#iefix') format('embedded-opentype'),
+        url($route + 'icomoon.woff2?' + $fontCode) format('woff2'),
+        url($route + 'icomoon.ttf?' + $fontCode) format('truetype'),
+        url($route + 'icomoon.woff?' + $fontCode) format('woff'),
+        url($route + 'icomoon.svg?' + $fontCode + '#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+    content: "\e917";
+  }
+
+.icon-hamburger-menu:before {
+    content: "\e916";
+}
+
+.icon-comprehensive-services:before {
+    content: "\e900";
+}
+
+.icon-customer-service:before {
+    content: "\e901";
+}
+
+.icon-efficiency:before {
+    content: "\e902";
+}
+
+.icon-experience:before {
+    content: "\e903";
+}
+
+.icon-expertise:before {
+    content: "\e904";
+}
+
+.icon-quality:before {
+    content: "\e905";
+}
+
+.icon-trustworthy:before {
+    content: "\e906";
+}
+
+.icon-cross:before {
+    content: "\e907";
+}
+
+.icon-customization:before {
+    content: "\e908";
+}
+
+.icon-diagonal-arrow:before {
+    content: "\e909";
+}
+
+.icon-down-arrow:before {
+    content: "\e90a";
+}
+
+.icon-up-arrow:before {
+    content: "\e90b";
+}
+
+.icon-facebook:before {
+    content: "\e90c";
+}
+
+.icon-linkedin:before {
+    content: "\e90d";
+}
+
+.icon-mail-send:before {
+    content: "\e90e";
+}
+
+.icon-quote-end:before {
+    content: "\e90f";
+}
+
+.icon-quote-start:before {
+    content: "\e910";
+}
+
+.icon-competitive-pricing:before {
+    content: "\e911";
+}
+
+.icon-Safety:before {
+    content: "\e912";
+}
+
+.icon-tick:before {
+    content: "\e913";
+}
+
+.icon-twitter:before {
+    content: "\e914";
+}
+
+.icon-user-rounded:before {
+    content: "\e915";
+}

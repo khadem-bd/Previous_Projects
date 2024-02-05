@@ -1,0 +1,232 @@
+table {
+    width: 100%;
+    min-width: 60%;
+    overflow-x: auto;
+    tr {
+        th {
+            color: #777171;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 10px;
+            border-top: 1px solid #eceaea;
+            border-bottom: 1px solid #eceaea;
+        }
+        td {
+            color: #777171;
+            font-weight: 400;
+            font-size: 12px;
+            padding: 10px;
+            border-bottom: 1px solid #eceaea;
+            vertical-align: top;
+            p {
+                margin-bottom: 5px;
+                font-size: 12px;
+            }
+            a {
+                display: inline-block;
+                color: #777171;
+                .icon {
+                    font-size: 20px;
+                }
+                &.dropdown-toggle {
+                    font-size: 20px;
+                    &:after {
+                        display: none;
+                    }
+                    &:hover {
+                        color: #777171;
+                    }
+                }
+            }
+            ul {
+                &.ride-routing {
+                    position: relative;
+                    li {
+                        position: relative;
+                        padding-left: 20px;
+                        p {
+                            font-size: 12px;
+                            color: #646464;
+                        }
+                        a {
+                            display: inline-block;
+                            font-size: 12px;
+                        }
+                        .bar {
+                            position: absolute;
+                            width: 13px;
+                            height: 1px;
+                            background-color: #f0ad4e;
+                            left: -3px;
+                            top: 8px;
+                        }
+                        &:before {
+                            @include psudo-common;
+                            width: 7px;
+                            height: 7px;
+                            border-radius: 50%;
+                            background-color: #f0ad4e;
+                            left: 0;
+                            top: 5px;
+                            z-index: 10;
+                        }
+                        &:after {
+                            @include psudo-common;
+                            width: 1px;
+                            height: 100%;
+                            background-color: #39771d;
+                            left: 3px;
+                            top: 8px;
+                        }
+                        &:first-child {
+                            .bar {
+                                background-color: #0cbc88;
+                            }
+                            &:before {
+                                background-color: #0cbc88;
+                            }
+                        }
+                        &:last-child {
+                            &:after {
+                                display: none;
+                            }
+                            .bar {
+                                background-color: #f34662;
+                            }
+                            &:before {
+                                background-color: #f34662;
+                            }
+                            .bar {
+                                &:after {
+                                    @include psudo-common;
+                                    width: 1px;
+                                    height: 6px;
+                                    background-color: #39771d;
+                                    left: 6px;
+                                    bottom: -9px;
+                                }
+                            }
+                        }
+                    }
+                    &:after {
+                        @include psudo-common;
+                        width: 1px;
+                        height: 5px;
+                        background-color: #39771d;
+                        left: 3px;
+                        top: 0px;
+                    }
+                }
+            }
+        }
+    }
+    &.inner-table {
+        tr {
+            td {
+                border-bottom: 1px solid #eceaea;
+            }
+        }
+    }
+    &.invisible-table {
+        tr {
+            th {
+                border: none;
+            }
+            td {
+                border: none;
+            }
+            &.total-row {
+                td {
+                    border-top: 1px solid #BFBFBF;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    &.booking-passenger-info {
+        box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.08);
+        background-color: #fff;
+        width: 100%;
+        tr {
+            th {
+                border-bottom: 0.5px solid #F0F0F0;
+                font-size: 10px;
+                font-weight: 800;
+                color: #565656;
+                padding: 8px 15px;
+            }
+            td {
+                padding: 8px 15px;
+                color: #737373;
+                font-size: 10px;
+                font-weight: 400;
+                a {
+                    display: inline-block;
+                    color: #39771D;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.dispatch-info {
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    overflow: hidden;
+    table {
+        tr {
+            td {
+                font-weight: 500;
+                font-size: 14px;
+                color: #000;
+                padding: 3px 10px;
+                &.numeric {
+                    text-align: right;
+                }
+            }
+            &:last-child {
+                td {
+                    border-bottom: unset;
+                }
+            }
+        }
+        &.t-align-top {
+            tr {
+                td {
+                    vertical-align: top;
+                }
+                th {
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    table {
+        tr {
+            th {
+                white-space: nowrap;
+            }
+            td {
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1484px) {
+    .dispatch-info table tr td,
+    .tbl-my-rides table tr td {
+        font-size: 10px;
+    }
+    .dispatch-time h2 {
+        font-size: 20px;
+        margin-top: 40px;
+    }
+    .dispatch-time p {
+        font-size: 12px;
+    }
+}

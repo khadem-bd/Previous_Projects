@@ -1,0 +1,159 @@
+.form-group {
+    position: relative;
+    margin-bottom: 10px;
+    label {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .form-control {
+        height: 40px;
+        border-radius: 4px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 13px;
+        appearance: auto;
+        &.is-invalid {
+            border: 1px solid $ss-validation-red;
+        }
+    }
+    &.with-addmore {
+        padding-right: 40px;
+        .btn {
+            &.btn-square {
+                position: absolute;
+                top: 26px;
+                right: 0;
+            }
+        }
+    }
+    &.search {
+        .icon {
+            display: inline-block;
+            font-size: 13px;
+            position: absolute;
+            top: 13px;
+            left: 13px;
+            color: #777171;
+        }
+        .form-control {
+            padding-left: 40px;
+        }
+    }
+    &.with-icon {
+        .form-control {
+            padding-left: 40px;
+        }
+        .icon {
+            display: inline-block;
+            font-size: 13px;
+            position: absolute;
+            top: 13px;
+            left: 13px;
+            color: #777171;
+        }
+    }
+    &.with-icon-and-label {
+        .form-control {
+            padding-left: 40px;
+        }
+        .icon {
+            display: inline-block;
+            font-size: 13px;
+            position: absolute;
+            top: 37px;
+            left: 13px;
+            color: #777171;
+        }
+    }
+}
+
+.chkbox {
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+    label {
+        &:before {
+            @include psudo-common;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            transition: all 0.5s ease;
+        }
+        &:after {
+            @include psudo-common;
+            width: 4px;
+            height: 8px;
+            border-right: 1px solid #FFFFFF;
+            border-bottom: 1px solid #FFFFFF;
+            top: 2px;
+            left: 5px;
+            transform: rotate(45deg);
+            z-index: 10;
+            transition: all 0.5s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    input[type="checkbox"] {
+        display: inline-block;
+        position: relative;
+        z-index: 20;
+        opacity: 0;
+        cursor: pointer;
+        &:checked {
+            +label {
+                &:after {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+.ngb-dp-arrow-btn {
+    color: $ss-darkgray;
+    box-shadow: none;
+}
+
+.intl-input {
+    width: 100%;
+    display: block;
+    .input-main-div {
+        .CountryNumberInput {
+            text-indent: 120px;
+            height: 40px;
+            width: 100%;
+            min-width: 250px;
+        }
+    }
+    .input-select-div {
+        .select2-container {
+            top: 1px;
+            left: 1px;
+            .selection {
+                .select2-selection {
+                    &.select2-selection--single {
+                        border-right: 1px solid #ced4da;
+                        border-left: unset;
+                        border-top: unset;
+                        border-bottom: unset;
+                        border-radius: 0px;
+                        height: 38px;
+                        padding-left: 10px;
+                        padding-top: 5px;
+                        .select2-selection__arrow {
+                            top: 5px;
+                            right: 9px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.select2-container {
+    z-index: 9999;
+}

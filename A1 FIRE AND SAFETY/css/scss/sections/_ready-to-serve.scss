@@ -1,0 +1,48 @@
+.ready-to-serve{
+    background-color: #F4F4F4;
+    background-image: url(../images/ready-to-serve/fire.svg);
+    background-position: left bottom;
+    background-repeat:repeat-x;
+    padding-top: 50px;
+    padding-bottom: 120px;
+    img{
+        width: 100%;
+    }
+    h2{
+        @include processText(false, 40px, 700, $gray, false, false, false, capitalize, false, false);
+    }
+    p{
+        @include processText(false, 16px, 600, $gray, 0px 0px 10px 0px, false, false, capitalize, false, false)
+    }
+    a{
+        &.btn{
+            display: block;
+            float: right;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .ready-to-serve{
+        h2{
+            font-size: 25px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .ready-to-serve{
+        padding-bottom: 70px;
+        a{
+            &.btn{
+                float: none;
+                margin-top: 20px;
+            }
+        }
+    }
+    
+}
+

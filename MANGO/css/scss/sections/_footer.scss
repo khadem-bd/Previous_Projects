@@ -1,0 +1,204 @@
+footer {
+    padding: 50px 0px;
+
+    .branding {
+        display: inline-block;
+        margin-bottom: 20px;
+
+        img {
+            width: 250px;
+        }
+    }
+
+    .footer-nav {
+        text-align: right;
+
+        li {
+            display: inline-block;
+            margin: 0px 10px;
+            a {
+                display: inline-block;
+                @include processText(#fff, 700, 15px, 0);
+                text-transform: uppercase;
+                position: relative;
+                padding: 10px 15px;
+
+
+                &:before{
+                    @include beforeAfter(0, 0, 0, 100%);
+                    background-color: #F28520;
+                    z-index: -1;
+                    border-radius: 50px;
+                    transition: all 0.5s ease;
+                }
+
+                &:hover{
+                    &:before{
+                        width: 100%;
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    .mail-contact {
+        @include processText(#fff, 700, 16px, 0px 0px 10px 0px);
+
+        a {
+            display: inline-block;
+            @include processText(#FBAE23, 500, 16px, 0px);
+        }
+    }
+
+    .social-icons {
+        text-align: right;
+        margin-top: 30px;
+
+        li {
+            display: inline-block;
+            margin: 0px 10px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+
+            a {
+                width: 50px;
+                height: 50px;
+                background-color: #F28520;
+                border-radius: 50%;
+                text-align: center;
+
+                span {
+                    color: #fff;
+                    font-size: 20px;
+                    display: inline-block;
+                    position: relative;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1400px) {
+    footer {
+        .footer-nav {
+            li {
+                display: inline-block;
+                margin: 0px;
+
+                a {
+                    font-size: 13px;
+                    padding: 0px 10px;
+                }
+            }
+        }
+
+        .social-icons li {
+            margin: 0px 5px;
+
+            a {
+                width: 30px;
+                height: 30px;
+
+                span {
+                    font-size: 14px;
+                    translate: unset;
+                    top: 32%;
+                }
+            }
+        }
+
+        .mail-contact{
+            font-size: 14px;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    footer {
+        .branding{
+            img{
+                width: 150px;
+            }
+        }
+        .footer-nav {
+            margin-bottom: 20px;
+            li {
+                display: inline-block;
+                margin: 0px;
+
+                a {
+                    font-size: 10px;
+                    padding: 5px;
+                }
+            }
+        }
+
+        .social-icons li {
+            margin: 0px 5px;
+
+            a {
+                width: 30px;
+                height: 30px;
+
+                span {
+                    font-size: 14px;
+                    translate: unset;
+                    top: 32%;
+                }
+            }
+        }
+
+        .mail-contact{
+            font-size: 12px;
+            a{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    footer{
+        text-align: center;
+
+        .footer-nav, .social-icons{
+            text-align: center;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 500px) {
+    footer{
+        text-align: center;
+
+        .footer-nav{
+            li{
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+        .social-icons{
+            li{
+                margin: 0px 2px;
+                a{
+                    width: 25px;
+                    height: 25px;
+                    font-size: 10px;
+                    span{
+                        top: 11px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,291 @@
+.banner{
+    overflow-x: hidden;
+    position: relative;
+    font-size: 0;
+    .top-gradient{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+        z-index: 60;
+    }
+    .bottom-gradient{
+        position: absolute;
+        bottom:0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 ); /* IE6-9 */
+        z-index: 60;
+        h2{
+            font-size: 23px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color:$white;
+            margin-bottom: 15px;
+        }
+        img{
+            max-width:100%;
+        }
+    }
+    .slider{
+        li{
+            img{
+                width:100%;
+            }
+        }
+    }
+    .booking-form{
+        background-color: $form-bg;
+        width:500px;
+        border-radius: $border-radius;
+        padding:30px;
+        position: absolute;
+        top: 150px;
+        right: 200px;
+        z-index: 100;
+        .top-space{
+            margin-top: 30px;
+        }
+        h1{
+            font-size: 30px;
+            font-weight: 600;
+            color:$white;
+            margin-bottom: 30px;
+        }
+        .option-tab{
+            overflow:hidden;
+            li{
+                display: block;
+                width: 50%;
+                box-sizing: border-box;
+                float: left;
+                a{
+                   display: block;
+                   text-align: center;
+                   color:$white;
+                   font-size: 16px;
+                   text-transform: uppercase;
+                   font-weight: 400; 
+                   border-bottom: 1px solid $white;
+                   padding:10px 0px;
+                   position: relative;
+                   &.active{
+                       &:after{
+                           position: absolute;
+                           content:"";
+                           width:100%;
+                           height: 3px;
+                           background-color: $white;
+                           left: 0;
+                           bottom:0;
+                       }
+                   }
+                }
+            }
+        }
+        .form-group{
+            padding-top: 20px;
+            position: relative;
+            margin-bottom: 0;
+            label{
+                display: block;
+                position: absolute;
+                font-size: 16px;
+                color:$white;
+                left: 30px;
+                top: 20px;
+                transition: all 0.5s ease;
+            }
+            span{
+                font-size: 16px;
+                color:$white;
+                display: inline-block;
+                position: absolute;
+                top: 25px;
+                left: 0;
+            }
+            .form-control{
+                border-radius: 0;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $white;
+                padding-left: 30px;
+                font-size: 16px;
+                color:$white;
+                position: relative;
+                z-index: 10;
+                &:focus{
+                    box-shadow: none;
+                }
+            }
+            &.contain{
+                label{
+                    top:5px;
+                }
+            }
+        }
+        .btn{
+            padding: 10px 30px;
+            color: $white;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: uppercase;
+            text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-top: 15px;
+            border:unset;
+            &.btn-primary{
+                background-color: $green;
+                border-radius: $btn-border-radius;
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1500px) {
+    .banner{
+        .booking-form{
+            top: 120px;
+            right:100px;
+            h1{
+                font-size: 25px;
+                margin-bottom: 15px;
+            }
+        }
+        .bottom-gradient{
+            padding-bottom: 20px;
+            img{
+                width: 800px;
+            }
+        }
+    } 
+}
+
+@media (min-width: 0px) and (max-width: 1250px) {
+    .banner{
+        .booking-form{
+            padding: 20px;
+            top: 120px;
+            right:100px;
+            h1{
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+            .btn{
+                font-size: 14px;
+            }
+            .top-space{
+                margin-top: 15px;
+            }
+            .option-tab{
+                li{
+                    a{
+                        font-size: 14px;
+                        padding: 5px 0px;
+                        &.active{
+                            &:after{
+                                height: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+            .form-group{
+                padding-top: 15px;
+                label{
+                    font-size: 14px;
+                }
+                span{
+                    font-size: 14px;
+                }
+            }
+        }
+        .bottom-gradient{
+            padding-bottom: 20px;
+            img{
+                width: 600px;
+            }
+            h2{
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+        }
+    } 
+}
+
+@media (min-width: 0px) and (max-width: 1050px) {
+    .banner{
+        .booking-form{
+            top: 100px;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 991px) {
+    .banner{
+        .booking-form{
+            background-color: $white;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            position: static;
+            width: auto;
+            margin: 50px 100px;
+            h1{
+                color:$dark;
+            }
+            .option-tab{
+                li{
+                    a{
+                        color:$textgray;
+                        border-bottom: 1px solid $textgray;
+                        &.active{
+                            color:$blue;
+                            &:after{
+                                background-color: $blue;
+                                height: 3px;
+                                bottom: -1px;
+                                z-index: 20;
+                            }
+                        }
+                    }
+                }
+            }
+            .form-group {
+                label{
+                    color:$dark;
+                }
+                span{
+                    color:$dark;
+                }
+                .form-control{
+                    color:$dark;
+                    border-bottom: 1px solid $textgray;
+                }
+            }
+        }
+        .bottom-gradient{
+            position: static;
+            padding: 10px 0px;
+            background: transparent;
+            background-color: $black;
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .banner{
+        .booking-form{
+            margin:50px 30px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@mixin top-left{
+    top:0;
+    left: 0;
+}
+@mixin top-right{
+    top:0;
+    right: 0;
+}
+@mixin bottom-left {
+    left: 0;
+    bottom: 0;
+}
+@mixin bottom-right {
+    left: 0;
+    bottom: 0;
+}

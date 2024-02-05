@@ -1,0 +1,117 @@
+.fleet{
+    background-color: $blue;
+    padding: 100px 0px;
+    .section-title{
+        color: $white;
+    }
+    .car-fleet{
+        position: relative;
+        li{
+            padding:30px;
+            text-align: center;
+            background-color: $white;
+            border-radius: $border-radius;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            img{
+                max-width: 80%;
+                display: $inlineblock;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .caption{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                color: $white;
+                font-size: 25px;
+                left: 0;
+                bottom: 0;
+                /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+51,000000+100&0+0,0.5+51,1+100 */
+                background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 51%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 51%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 51%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+                padding-top: 30px;
+                padding-bottom: 10px;
+            }
+        }
+        .slick-list{
+            height: 500px;
+            &.draggable{
+                padding: 0 !important;
+            }
+        }
+        .slick-track{
+            padding-top: 100px;
+        }
+        .slick-center{
+            li{
+                transform: scale(1.5,1.5);
+                z-index: 100;
+                box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+            }
+        }
+        .slick-slide {
+            margin: 0 35px;
+            transition:all 0.5s ease;
+            opacity: 0;
+            &.slick-active{
+                opacity: 1;
+            }
+        }
+        .slick-arrow{
+            position: absolute;
+            top:50%;
+            border:none;
+            text-indent: -9999px;
+            background-color: transparent;
+            width:24px;
+            height: 46px;
+            background-position: top center;
+            background-repeat: no-repeat;
+            transform: translateY(-50%);
+            &.slick-prev{
+                background-image: url(../images/rc-fleet/left-arrow.png);
+                left: -30px;
+            }
+            &.slick-next{
+                background-image: url(../images/rc-fleet/right-arrow.png);
+                right: -30px;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1500px) {
+    .fleet{
+        padding: 50px 0px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1250px) {
+    .fleet{
+        .car-fleet{
+            .slick-list{
+                height: 400px;
+            }
+            li{
+                height: 200px;
+                .caption{
+                    font-size: 20px;
+                }
+                img{
+                    max-width: 50%;
+                }
+            }
+        }
+    }
+}

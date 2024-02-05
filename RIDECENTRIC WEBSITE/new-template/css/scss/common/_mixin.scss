@@ -1,0 +1,66 @@
+@mixin inlineblock {
+    display: inline-block;
+}
+
+@mixin block {
+    display: block;
+}
+
+@mixin psudoelem {
+    position: absolute;
+    content: "";
+}
+
+@mixin transition {
+    transition: all 0.5s ease;
+}
+
+@mixin relative {
+    position: relative;
+}
+
+@mixin absolute {
+    position: absolute;
+}
+
+@mixin fixed {
+    position: fixed;
+}
+
+@mixin booking_form_input_text {
+    color: $white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@mixin valign-center{
+    @include relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// @mixin common-text{
+//     h2{
+//         font-style: normal;
+//         font-weight: 400;
+//         font-size: 48px;
+//         line-height: 59px;
+//         color: #000000;
+//         text-transform: uppercase;
+//         margin-bottom: 30px;
+//         span{
+//             @include block;
+//             font-weight: 700;
+//         }
+//     }
+
+//     p{
+//         font-weight: 400;
+//         font-size: 24px;
+//         margin: 0;
+//         &.bold{
+//             font-weight: 700;
+//         }
+//     }
+// }

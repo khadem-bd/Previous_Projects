@@ -1,0 +1,154 @@
+.airport-instructions-section{
+    .content {
+        .alphabet{
+            margin-bottom: 80px;
+            p{
+                font-size: 24px;
+                a {
+                        padding: 0 12px;
+                        color: #6A6A6A;
+                        &.active {
+                            font-weight: 700;
+                        }
+                    }
+            }
+        }
+        .all-website{
+            p{
+                margin: 0;
+                &.single-letter {
+                    margin-top: 20px;
+                    font-size: 64px;
+                    font-weight: 700;
+                    color: #0376F9;
+                    text-align: center;
+                }
+                &.multiple-letter{
+                    span {
+                            margin-left: 150px;
+                    
+                            &.border-heading {
+                                border-top: 2px solid #d9d9d9;
+                                margin-top: -8px;
+                            }
+                        }
+                }
+                &.single-letter-border{
+                    span {
+                            margin-left: 80px;
+                    
+                            &.border-heading {
+                                border-top: 2px solid #d9d9d9;
+                                margin-top: -8px;
+                            }
+                        }
+                }
+            }
+            .website-details {
+                h3{
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                p{
+                    font-size: 20px;
+                }
+                .web-link{
+                    margin-top: 20px;
+                    font-size: 24px;
+                    color: #0FC500;
+                    text-transform: capitalize;
+                    &:focus{
+                        box-shadow: none;
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .airport-instructions-section {
+        .content {
+
+            p {
+                &.head-border-bottom {
+                    border-bottom: 2px solid #D9D9D9;
+                    width: 100%;
+                }
+        
+                &.border-blue {
+                    margin-top: -30px;
+                    border-bottom: 4px solid rgba(3, 118, 249, 1);
+                    border-radius: 3px 3px 0px 0px;
+                    width: 100px;
+                }
+            }
+
+
+            .alphabet {
+                margin-bottom: 50px;
+
+                p {
+                    a {
+                        font-size: 12px;
+                        padding: 0px 6px;
+                        color: #6A6A6A;;
+                        display: inline-block;
+
+                        &.active {
+                            font-weight: 700;
+                            ;
+                        }
+                    }
+                }
+            }
+
+            .all-website {
+                p {
+                    margin: 0;
+
+                    &.single-letter {
+                        font-size: 64px !important;
+                        font-weight: 700;
+                        color: #0376F9;
+                        text-align: left;
+                        margin-bottom: 50px;
+                    }
+                   
+                }
+
+                .website-details {
+                    h3 {
+                        font-size: 20px;
+                        line-height: 28px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                    .web-link {
+                        margin-top: 10px;
+                        font-size: 16px;
+                        color: #0FC500;
+                        text-transform: capitalize;
+
+                        &:focus {
+                            box-shadow: none;
+                            text-decoration: none;
+                        }
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

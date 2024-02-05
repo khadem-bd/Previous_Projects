@@ -1,0 +1,640 @@
+.prelogin-wrapper {
+    padding: 30px 0px;
+
+    .pre-login {
+        background-color: #1E1E1E;
+        border-radius: 4px;
+        padding: 40px;
+
+        .form {
+            width: 462px;
+            margin: 0 auto;
+
+            h2 {
+                @include processText(#fff, 700, 32px, 0px 0px 18px 0px);
+
+                .icon {
+                    color: #F28520;
+                    display: inline-block;
+                    font-size: 15px;
+                    vertical-align: top;
+                    margin-top: 11px;
+                }
+            }
+
+            a {
+                display: inline-block;
+                @include processText(#F28520, 700, 16px, 0px);
+
+                .icon {
+                    display: inline-block;
+                    margin-right: 5px;
+                    font-size: 15px;
+                }
+            }
+
+            p {
+                @include processText(#fff, 500, 16px, 0px 0px 18px 0px);
+
+                a {
+                    &.bold {
+                        @include processText(#fff, 700, 16px, 0px 0px 18px 0px);
+                    }
+                }
+
+                &.mca-text {
+                    @include processText(#fff, 500, 14px, 0px);
+                    padding: 18px 30px;
+                    border-radius: 4px;
+                    border: 1px solid #353535;
+
+                    a {
+                        color: #F28520;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .form-group {
+                position: relative;
+
+                .form-control {
+                    background-color: transparent;
+                    height: 58px;
+                    border-radius: 10px;
+                    border: 1px solid #353535;
+                    margin-bottom: 10px;
+                    box-shadow: unset;
+                    transition: all 0.5s ease;
+                    @include processText(#B6B6B6, 500, 16px, 0);
+
+                    &:focus {
+                        box-shadow: unset;
+                        border: 1px solid #F28520;
+                    }
+
+                    &::-webkit-input-placeholder {
+                        @include processText(#B6B6B6, 500, 16px, 0);
+                    }
+
+                    &::-moz-placeholder {
+                        @include processText(#B6B6B6, 500, 16px, 0);
+                    }
+
+                    &:-ms-input-placeholder {
+                        @include processText(#B6B6B6, 500, 16px, 0);
+                    }
+
+                    &:-moz-placeholder {
+                        @include processText(#B6B6B6, 500, 16px, 0);
+                    }
+
+                    option {
+                        font-family: 'Metropolis Extra';
+                    }
+
+                    &.password {
+                        padding-right: 40px;
+                    }
+                }
+
+                .error-text {
+                    @include processText(#F00, 400, 14px, 0px);
+                    display: none;
+                }
+
+                &.has-error {
+                    .form-control {
+                        border: 1px solid #FF0000;
+                    }
+
+                    .error-text {
+                        display: block;
+                    }
+                }
+
+                .toggleShowHide {
+                    display: inline-block;
+                    color: #C2C2C2;
+                    position: absolute;
+                    top: 17px;
+                    right: 20px;
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .form-check {
+                position: relative;
+
+                .form-check-label {
+                    @include processText(#E4E4E4, 500, 16px, 0 0 0 10px);
+
+                    &:before {
+                        @include chkbox_bg(#F28520, 14px, 14px, 6px, 0px, 2px, 0);
+                    }
+
+                    &:after {
+                        @include chkbox_tick(5px, 9px, #1E1E1E, 7px, 4px, 0);
+                    }
+                }
+
+                .form-check-input {
+                    opacity: 0;
+                    width: 14px;
+                    height: 14px;
+                    position: relative;
+                    z-index: 20;
+                    cursor: pointer;
+
+                    &:checked {
+                        +.form-check-label {
+                            &:before {
+                                @include chkbox_bg(#F28520, 14px, 14px, 6px, 0px, 2px, 1);
+                            }
+
+                            &:after {
+                                @include chkbox_tick(5px, 9px, #1E1E1E, 7px, 4px, 1);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .form-radio {
+                position: relative;
+                padding-left: 30px;
+                margin-bottom: 20px;
+
+                label {
+                    display: inline-block;
+                    @include processText(#fff, 500, 16px, 0);
+                    @include custom_radio_btn(20px, 20px, #fff, 3px, 0, 14px, 14px, #F28520, 6px, 3px, false);
+                }
+
+                input[type='radio'] {
+                    width: 20px;
+                    height: 20px;
+                    opacity: 0;
+                    position: absolute;
+                    left: 0;
+                    top: 3px;
+                    z-index: 30;
+                    cursor: pointer;
+
+                    &:checked {
+                        &+label {
+                            @include custom_radio_btn(20px, 20px, #fff, 3px, 0, 14px, 14px, #F28520, 6px, 3px, true);
+                        }
+                    }
+                }
+
+            }
+
+            .fp-wrapper {
+                text-align: right;
+
+                .forgot-password {
+                    display: inline-block;
+                    @include processText(#fff, 700, 16px, 0);
+                }
+            }
+
+
+            .cta-btn {
+                @include btnStyle(false, unset, 50px, 20px 10px, true, $white, 700, 20px, 50px 0px 15px 0px);
+                transition: all 1s ease;
+                font-family: 'Monument Extended';
+                overflow: hidden;
+                position: relative;
+                background: var(--Gradient, linear-gradient(180deg, rgba(254, 80, 0, 0.80) 0%, rgba(254, 80, 0, 0.00) 51.04%, rgba(254, 80, 0, 0.80) 100%), #F28520);
+
+                svg {
+                    position: absolute;
+                    z-index: 2;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    color: #111212;
+                    width: 0;
+                    height: auto;
+                    -webkit-transition: 1s;
+                    transition: 1s;
+                    max-width: none;
+                }
+
+                &:hover {
+                    background: var(--Black, #111212);
+                    box-shadow: -15px 15px 16px 0px rgba(0, 0, 0, 0.28);
+                    text-decoration: none;
+                    color:#F28520;
+                    svg {
+                        width: 300%;
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .social-login-opt-text {
+                text-align: center;
+                position: relative;
+
+                span {
+                    display: inline-block;
+                    @include processText(#E4E4E4, 500, 16px, 0);
+                    padding: 10px;
+                    background-color: #1E1E1E;
+                    position: relative;
+                    z-index: 20;
+                }
+
+                &:before {
+                    @include beforeAfter(23px, 0px, 100%, 1px);
+                    background-color: #353535;
+                    z-index: 10px;
+                }
+            }
+
+            .social-login-opt {
+                text-align: center;
+
+                li {
+                    display: inline-block;
+                    margin: 50px 10px;
+
+                    a {
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 10px;
+                        border: 1px solid #353535;
+                        display: block;
+                        text-align: center;
+
+                        img {
+                            width: 18px;
+                            position: relative;
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+
+
+                }
+            }
+
+            .form-switch {
+                position: relative;
+                padding-left: 60px;
+                margin-bottom: 20px;
+
+                label {
+                    display: inline-block;
+                    @include processText(#fff, 500, 16px, 0);
+                    @include checkboxSwitch(50px, 27px, #BDBEBE, #E37639, 0, 0, 21px, 21px, #fff, 3px, 3px, 25px, false);
+                }
+
+                input[type="checkbox"] {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 50px;
+                    height: 27px;
+                    opacity: 0;
+                    z-index: 30;
+                    cursor: pointer;
+
+                    &:checked {
+                        &+label {
+                            @include checkboxSwitch(50px, 27px, #BDBEBE, #E37639, 0, 0, 21px, 21px, #fff, 3px, 3px, 25px, true);
+                        }
+                    }
+                }
+            }
+
+            .accordion {
+                width: 100%;
+                list-style-type: none;
+                padding: 0px;
+
+                li {
+                    list-style-type: none;
+                    padding: 0px;
+                    margin-bottom: 10px;
+                }
+
+                .heading {
+                    padding: 15px;
+                    background-color: #F28520;
+                    @include processText(#fff, 500, 16px, 0);
+                    border-radius: 5px;
+                    cursor: pointer;
+                    position: relative;
+
+                    &:before {
+                        position: absolute;
+                        content: "";
+                        background-color: #fff;
+                        width: 16px;
+                        height: 2px;
+                        border-radius: 5px;
+                        top: 50%;
+                        right: 20px;
+                        transform: translateY(-50%);
+                    }
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        background-color: #fff;
+                        width: 16px;
+                        height: 2px;
+                        border-radius: 5px;
+                        top: 27px;
+                        right: 20px;
+                        transform: rotate(90deg);
+                        transition: all 0.5s ease;
+                    }
+
+                    &.turn {
+                        &:after {
+                            top: 26px;
+                            transform: rotate(0deg);
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                .content {
+                    padding: 15px;
+                    border-left: 1px solid #353535;
+                    border-bottom: 1px solid #353535;
+                    border-right: 1px solid #353535;
+                    -webkit-border-bottom-right-radius: 4px;
+                    -webkit-border-bottom-left-radius: 4px;
+                    -moz-border-radius-bottomright: 4px;
+                    -moz-border-radius-bottomleft: 4px;
+                    border-bottom-right-radius: 4px;
+                    border-bottom-left-radius: 4px;
+                    display: none;
+
+                    h2 {
+                        @include processText(#F28520, 600, 20px, 0);
+                    }
+                }
+            }
+
+            table {
+                width: 100%;
+
+                tr {
+                    th {
+                        background-color: #2D2D2D;
+                        padding: 11px 13px;
+                        @include processText(#fff, 500, 14px, 0);
+                    }
+
+                    td {
+                        padding: 11px 13px;
+                        @include processText(#fff, 500, 14px, 0);
+                        border: 0.683px solid #2D2D2D;
+                    }
+
+                    &:last-child {
+                        td {
+                            &:first-child {
+                                -webkit-border-bottom-left-radius: 4px;
+                                -moz-border-radius-bottomleft: 4px;
+                                border-bottom-left-radius: 4px;
+                            }
+
+                            &:last-child {
+                                -webkit-border-bottom-right-radius: 4px;
+                                -moz-border-radius-bottomright: 4px;
+                                border-bottom-right-radius: 4px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tnc {
+        h2 {
+            @include processText(#fff, 700, 32px, 0px 0px 36px 0px);
+        }
+
+        h3 {
+            @include processText(#fff, 700, 20px, 0px 0px 34px 0px);
+        }
+
+        p {
+            @include processText(#fff, 400, 16px, 0px 0px 43px 0px);
+        }
+    }
+
+    .brand-settings {
+        h2 {
+            @include processText(#fff, 700, 24px, 0px 0px 15px 0px);
+        }
+
+        h3 {
+            @include processText(#fff, 700, 16px, 0px 0px 15px 0px);
+        }
+
+        p {
+            @include processText(#fff, 500, 16px, 0px 0px 20px 0px);
+        }
+
+        .form-group {
+            textarea {
+                &.form-control {
+                    border: 1px solid #353535;
+                    border-radius: 4px;
+                    background-color: transparent;
+                    box-shadow: none;
+                    transition: all 0.5s ease;
+                    resize: none;
+
+                    &:focus {
+                        border: 1px solid #F28520;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .prelogin-wrapper {
+        .pre-login {
+            .form {
+                width: 100%;
+                margin: 0 auto;
+
+                .form-radio {
+                    label {
+                        font-size: 12px;
+                    }
+                }
+
+                .form-group {
+                    .form-control {
+                        height: 40px;
+                        font-size: 12px;
+
+                        &::-webkit-input-placeholder {
+                            font-size: 12px;
+                        }
+
+                        &::-moz-placeholder {
+                            font-size: 12px;
+                        }
+
+                        &:-ms-input-placeholder {
+                            font-size: 12px;
+                        }
+
+                        &:-moz-placeholder {
+                            font-size: 12px;
+                        }
+
+                        option {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                h2 {
+                    font-size: 22px;
+                    margin: 0px 0px 10px 0px;
+
+                    .icon {
+                        margin-top: 6px;
+                    }
+                }
+
+                .fp-wrapper {
+                    text-align: left;
+                    margin-top: 15px;
+                }
+
+                .social-login-opt {
+                    li {
+                        margin: 50px 5px;
+                    }
+                }
+
+                .form-check {
+                    .form-check-label {
+                        font-size: 12px;
+                    }
+                }
+
+                .fp-wrapper {
+                    .forgot-password {
+                        display: inline-block;
+                        color: #fff;
+                        font-size: 12px;
+                        font-weight: 700;
+                        margin: 0;
+                    }
+                }
+
+                .cta-btn {
+                    padding: 15px 10px;
+                    font-size: 16px;
+                }
+
+                p {
+                    font-size: 12px;
+
+                    a {
+                        font-size: 12px;
+
+                        &.bold {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .social-login-opt-text {
+                    &:before {
+                        top: 19px;
+                    }
+
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 500px) {
+    .prelogin-wrapper {
+        .pre-login {
+            padding: 20px;
+
+            .form {
+                .social-login-opt {
+                    li {
+                        margin: 10px 5px;
+
+                        a {
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 4px;
+
+                            img {
+                                width: 13px;
+                                position: relative;
+                                display: inline-block;
+                                vertical-align: top;
+                                top: 5px;
+                            }
+                        }
+                    }
+                }
+
+                .accordion {
+                    .heading {
+                        font-size: 12px;
+                        font-weight: 600;
+
+                        &::after {
+                            top: 24px;
+                        }
+                    }
+
+                    .content {
+                        h2 {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                p {
+                    &.mca-text {
+                        padding: 10px;
+                        font-size: 12px;
+                    }
+                }
+
+                a {
+                    font-size: 12px;
+
+                    .icon {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

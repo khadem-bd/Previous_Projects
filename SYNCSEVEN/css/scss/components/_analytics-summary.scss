@@ -1,0 +1,108 @@
+.analytics-summary {
+    overflow: hidden;
+    padding: 15px;
+    .icon {
+        display: inline-block;
+        font-size: 60px;
+        color: $white;
+        opacity: 0.5;
+    }
+    .text {
+        display: inline-block;
+        float: right;
+        color: $white;
+        text-align: right;
+        h2 {
+            font-size: 33px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+    &.skyblue {
+        background-color: #1ED6FF;
+    }
+    &.red {
+        background-color: #F47521;
+    }
+    &.yellow {
+        background-color: #FFC606;
+    }
+}
+
+.double-analytics-data {
+    width: 18.1%;
+    display: inline-block;
+    margin-right: 2%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    border-radius: 4px;
+    h2 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    p {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    &.light-red {
+        color: #F34662;
+        background-color: #FFCBD3;
+        .data-top {
+            border-bottom: 1px dashed #F34662;
+            padding: 15px;
+        }
+        .data-bottom {
+            padding: 15px;
+        }
+    }
+    &.light-blue {
+        color: #0CA5BC;
+        background-color: #B6F5FF;
+        .data-top {
+            border-bottom: 1px dashed #0CA5BC;
+            padding: 15px;
+        }
+        .data-bottom {
+            padding: 15px;
+        }
+    }
+    &.light-green {
+        color: #0CBC88;
+        background-color: #C1FFED;
+        .data-top {
+            border-bottom: 1px dashed #0CBC88;
+            padding: 15px;
+        }
+        .data-bottom {
+            padding: 15px;
+        }
+    }
+    &.blanched-almond {
+        color: #F0AD4E;
+        background-color: #FCE8CD;
+        .data-top {
+            border-bottom: 1px dashed #F0AD4E;
+            padding: 15px;
+        }
+        .data-bottom {
+            padding: 15px;
+        }
+    }
+    &.water-blue {
+        color: #0C75BC;
+        background-color: #D1EDFF;
+        .data-top {
+            border-bottom: 1px dashed #0C75BC;
+            padding: 15px;
+        }
+        .data-bottom {
+            padding: 15px;
+        }
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}

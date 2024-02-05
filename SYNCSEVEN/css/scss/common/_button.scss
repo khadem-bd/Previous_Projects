@@ -1,0 +1,63 @@
+.btn {
+    font-size: 14px;
+    padding: 10px 30px;
+    font-weight: 700;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    &.btn-primary {
+        color: $white;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    &.btn-fluid {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 8px 0px;
+    }
+    &.btn-success {
+        border-radius: 50px;
+        color: $white;
+    }
+    &.btn-rounded {
+        border-radius: 50px;
+    }
+    &.header-btn {
+        text-transform: none;
+        padding: 5px 30px;
+        color: $white;
+        .icon {
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
+    &.btn-ghost {
+        &.blue {
+            border: 1px solid #347AF3 !important;
+            color: #347AF3 !important;
+        }
+    }
+    &.btn-filter {
+        padding: 8px 30px 8px 0px;
+        position: relative;
+        border: 1px solid #C8C8C8;
+        color: #696969;
+        font-weight: 400;
+        .icon {
+            font-size: 20px;
+            position: absolute;
+            color: #C8C8C8;
+            top: 10px;
+            right: 12px;
+        }
+    }
+    &.btn-square {
+        padding: 6px;
+        border-radius: 3px;
+        color: $white;
+        font-size: 0px;
+        .icon {
+            font-size: 14px;
+        }
+    }
+}

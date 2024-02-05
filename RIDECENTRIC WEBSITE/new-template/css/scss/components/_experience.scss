@@ -1,0 +1,118 @@
+.ride-reimagined2 {
+    padding: 150px 0;
+
+    
+}
+
+.driver-section {
+    a {
+        padding: 15px;
+    }
+}
+
+.exp-fleet-section {
+    padding: 150px 0px;
+
+    .content {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        h2 {
+            &.section-title {
+                margin-bottom: 20px;
+            }
+        }
+
+        a {
+            padding: 17px 70px;
+            margin-top: 15px;
+            background-color: #0376F9;
+        }
+    }
+
+    .vehicle-selection {
+        li {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+
+    .ride-reimagined2,
+    .exp-fleet-section {
+        padding: 80px 0;
+
+        .content {
+            h2 {
+                &.section-title {
+                    padding-left: 0 !important;
+                }
+            }
+
+            a {
+                padding: 12px 32px;
+                font-size: 15px;
+            }
+        }
+    }
+
+    .driver-section {
+        padding-top: 80px;
+        padding-bottom: 0px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+
+    .ride-reimagined2,
+    .exp-fleet-section {
+        padding: 80px 0;
+        .content {
+            h2 {
+                &.section-title {
+                    padding-left: 0 !important;
+                    margin-bottom: 5px;
+                }
+            }
+
+            a {
+                padding: 7px 32px;
+                font-size: 10px;
+            }
+        }
+        .vehicle-selection {
+            li {
+                text-align: center;
+                img {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    .exp-banner{
+        height: 50vh;
+    }
+
+    .driver-section {
+        padding-top: 80px;
+        padding-bottom: 0px;
+        h2{
+            margin-bottom: 5px;
+            .icon{
+                margin: 0 3px;
+            }
+        }
+        img{
+            border-radius: 20px;
+        }
+        a {
+            padding: 8px 25px;
+            font-size: 12px !important;
+        }
+    }
+}

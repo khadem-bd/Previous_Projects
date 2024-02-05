@@ -1,0 +1,65 @@
+$speed:2s;
+.animate{
+    position: relative;
+    opacity: 0;
+    &.animate-left{
+        left:-100px !important; 
+        transition: all $speed ease;
+        &.play{
+            left: 0 !important;
+            opacity: 1;
+        }
+    }
+
+    &.animate-right{
+        right:-100px !important; 
+        transition: all $speed ease;
+        &.play{
+            right: 0 !important;
+            opacity: 1;
+        }
+    }
+
+    &.animate-top{
+        top:-100px !important; 
+        transition: all $speed ease;
+        &.play{
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+    &.animate-bottom{
+        bottom:-100px !important; 
+        transition: all $speed ease;
+        &.play{
+            bottom: 0 !important;
+            opacity: 1;
+        }
+    }
+
+    &.animate-fadeIn{
+        transition: all $speed ease;
+        &.play{
+            opacity: 1;
+        }
+    }
+
+    &.animate-top-img-right{
+        right:-100px !important; 
+        transition: all $speed ease;
+        &.play{
+            right: -20px !important;
+            opacity: 1;
+        }
+    }
+
+    &.animate-top-img-left{
+        left:-100px !important; 
+        transition: all $speed ease;
+        &.play{
+            left: -20px !important;
+            opacity: 1;
+        }
+    }
+}

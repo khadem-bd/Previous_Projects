@@ -1,0 +1,88 @@
+/*=== Common CSS start Here ===*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+.heading-before {
+  position: relative;
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 60%;
+    top: 20%;
+    left: 0;
+    background-color: $green-color;
+  }
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul.ul-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.btn {
+  border-radius: 50px;
+  padding: 10px 30px;
+  border: none;
+  transition: all 0.5s ease;
+
+  &.btn-primary {
+    background-color: $green-color;
+    color:$white;
+    font-weight: 600;
+    &:focus{
+      background-color: $green-color;
+      box-shadow: none;
+    }
+    &:active{
+      background-color: $green-color !important;
+      box-shadow: none !important;
+    }
+  }
+
+  &:hover{
+    transform: scale(1.1,1.1);
+  }
+  
+}
+
+/*=== Common CSS end Here ===*/

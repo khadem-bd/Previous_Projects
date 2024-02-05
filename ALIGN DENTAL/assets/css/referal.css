@@ -1,0 +1,368 @@
+.top-location-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.align-nav {
+  background: #ebf7ff;
+  border-bottom: 1px solid #f47521;
+}
+.location-history {
+  text-align: end;
+}
+.form-head {
+  text-align: center;
+  border-bottom: 2px solid #429fdd;
+  margin: 50px 0;
+  padding-bottom: 15px;
+}
+
+.form-head h3 {
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 110%;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  white-space: pre;
+  gap: 10px;
+  /* margin-bottom: 50px; */
+}
+
+.form-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #9b9b9b;
+}
+
+/* Hide the default check mark */
+input.dent-check[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
+/* Set the image for the checkbox */
+input.dent-check[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background-image: url("../img/dent.png");
+  background-size: contain;
+  vertical-align: middle;
+  background-position: center;
+  /* position: absolute; */
+}
+input.dent-check[type="checkbox"]:checked + label:before {
+  background-image: url("../img/dent-alt.png");
+  z-index: 0;
+}
+input.dent-check[type="checkbox"]:checked + label {
+  color: #fff;
+  z-index: 1;
+  position: relative;
+}
+.dent-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 50px;
+  overflow-x: scroll;
+}
+
+.selector-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 23px;
+}
+.check-dent label span {
+  position: absolute;
+}
+.check-dent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.check-dent label {
+  width: 100%;
+  display: contents;
+  font-size: 16px;
+  color: #429fdd;
+}
+
+.selector-area:first-child {
+  border-bottom: 2px solid #434343;
+  border-right: 1px solid #434343;
+}
+.selector-area:nth-child(2) {
+  border-bottom: 2px solid #434343;
+  border-left: 1px solid #434343;
+}
+.selector-area:nth-child(3) {
+  border-right: 1px solid #434343;
+}
+.selector-area:nth-child(4) {
+  border-left: 1px solid #434343;
+}
+.margin-minus {
+  margin-top: -45px;
+}
+
+input.mark-check[type="checkbox"] {
+  position: relative;
+  border: 2px solid #429fdd;
+  border-radius: 2px;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+  margin: 0px 0.6em 0px 0px;
+  outline: 0px;
+  vertical-align: text-top;
+  height: 20px;
+  width: 20px;
+  appearance: none;
+  opacity: 0.5;
+  padding: 0px !important;
+}
+
+input.mark-check[type="checkbox"]:hover {
+  opacity: 1;
+}
+
+input.mark-check[type="checkbox"]:checked {
+  opacity: 1;
+}
+
+input.mark-check[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 10px;
+  border-style: solid;
+  border-color: #429fdd;
+  border-image: initial;
+  border-width: 0px 2px 2px 0px;
+  margin: -1px -1px 0px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+  opacity: 1;
+}
+
+input.mark-check[type="checkbox"]::before {
+  opacity: 0;
+}
+
+input.mark-check[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+.form-group-checkbox {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 25px; */
+}
+
+p.check-box-title {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+p.check-box-title i {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+p.check-box-title {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+p.check-box-title i {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+button.submit-btn {
+  background: var(--main-color);
+  border: none;
+  color: var(--white-color);
+  padding: 8px 25px;
+  border-radius: 40px;
+  font-weight: 500;
+}
+
+/* ============================second page ======================== */
+.location-top {
+  text-align: center;
+  width: 100%;
+}
+
+.location-top h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.endodontist-img {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
+}
+
+[type="file"] + label {
+  background: #e6e6e6;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Rubik", sans-serif;
+  font-size: inherit;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 1rem 50px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+[type="file"] + label:hover {
+  background-color: #aba9a9;
+}
+.teeth-root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.option-input {
+  margin-top: 50px;
+}
+h3.section-title {
+  margin: 35px 0;
+}
+.appreciate-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.appreciate-content h3 {
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+
+.appreciate-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+p.rf-link {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+}
+a.out-link {
+  color: #429fdd;
+  transition: 0.3s;
+  padding: 5px;
+}
+.refer-body {
+  padding-right: 50px;
+  position: relative;
+  background: #ddd;
+}
+.close-refer {
+  position: fixed;
+  right: 13px;
+  top: 20px;
+}
+
+.dent-selector::-webkit-scrollbar {
+  width: 0;
+}
+.endodontist-img img {
+  width: 100%;
+}
+.grid-4 {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.grid-3-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media screen and (max-width: 768px) {
+  .grid-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .location-top h2 {
+    font-size: 32px;
+  }
+  .top-location-area {
+    font-size: 12px;
+    line-height: 170%;
+  }
+  .grid-3-1 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .option-input {
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 170%;
+  }
+  .form-group-checkbox {
+    font-size: 14px;
+  }
+  .f-row-brack {
+    display: inline-grid;
+  }
+  h3.section-title {
+    font-size: 18px;
+  }
+}
+
+.parseint-info {
+  background: #fff;
+}
+.lab-section {
+  background: #ffffff;
+}
+.referral-form {
+  background: #fff;
+}
+@media screen and (max-width: 500px) {
+  .grid-3-1 {
+    grid-template-columns: 1fr;
+  }
+  .input-wrapper {
+    font-size: 14px;
+  }
+  .refer-body {
+    padding-right: 30px;
+  }
+  .close-refer a img {
+    width: 13px;
+  }
+}
